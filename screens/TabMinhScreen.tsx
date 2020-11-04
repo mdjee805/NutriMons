@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
@@ -8,23 +8,35 @@ export default function TabMinhScreen() {
     return (
 
         <View style={styles.container}>
+            <View style={styles.header}>
 
-            <View style={styles.bluebox}>
-                <Text style={styles.title}>NutriMons</Text>
+                {/* "Nutrimons" header */}
+                <View style={styles.bluebox}>
+                    <Text style={styles.title}>NutriMons</Text>
+                </View>
+
+                {/* "Dashboard" header */}
+                <Text style={{ alignItems: 'center' }}>Dashboard</Text>
+
+
+
+
             </View>
+            
 
-            <Text style={styles.title1}>Dashboard</Text>
+            
 
+            <Image style={{ width: 40, height: 40 }} source={require('../assets/images/tamaPic.png')} />
+
+            <div>{/* "Today" header */}</div>
             <View style={{
-                width: 3000, height: 30, alignItems: 'center',
-                backgroundColor: 'blue'
-            }}>
+                width: 2000, height: 30, alignItems: 'center',
+                backgroundColor: 'blue'}}>
                 <Text style={{ fontSize: 20, fontWeight: 'normal', color: 'white' }}>Today</Text>
             </View>
-            <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-            <EditScreenInfo path="/screens/TabMinhScreen.js" />
+            
 
-
+            <div>{/* "Nutrient Overview" header */}</div>
             <Text style={styles.graphTitle}>
                 Nutrient Overview</Text>
         </View>
@@ -34,9 +46,27 @@ export default function TabMinhScreen() {
 
 const styles = StyleSheet.create({
     container: {
-
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'space-around',
+    },
+    header: {
+        flex: .1,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
         alignItems: 'center',
-        justifyContent: 'center',
+    },
+    footer: {
+        flex: .1,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+    },
+    body: {
+        flex: .8,
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
     },
     title: {
         fontSize: 50,
@@ -44,11 +74,12 @@ const styles = StyleSheet.create({
         color: 'white',
     },
     title1: {
+        alignItems: 'center',
+        color:'black',
         fontSize: 30,
         fontWeight: 'normal',
     },
     graphTitle: {
-        marginVertical: 800,
         fontSize: 30,
         fontWeight: 'normal',
     },
