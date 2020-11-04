@@ -16,6 +16,26 @@ export default {
               TabTwoScreen: 'two',
             },
           },
+          TabBryan: {
+            screens: {
+              TabBryanScreen: 'Bryan',
+            },
+          },
+          TabAlissa: {
+            screens: {
+              TabAlissaScreen: 'Alissa',
+            },
+          },
+          TabMichael: {
+            screens: {
+              TabMichaelScreen: 'Michael',
+            },
+          },
+          TabMinh: {
+            screens: {
+              TabMinhScreen: 'Minh',
+            },
+          },
         },
       },
       NotFound: '*',
