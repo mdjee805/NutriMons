@@ -8,7 +8,6 @@ export default function TabMinhScreen() {
     return (
 
         <View style={styles.container}>
-
             <View style={styles.bluebox}>
                 <Text style={styles.title}>NutriMons</Text>
             </View>
