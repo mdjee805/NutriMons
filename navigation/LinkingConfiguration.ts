@@ -38,6 +38,51 @@ export default {
           },
         },
       },
+      Profile: {
+        screens: {
+          Profile: {
+            screens: {
+              ProfileScreen: 'Profile',
+            },
+          },
+        },
+      },
+      Tamagotchi: {
+        screens: {
+          Tamagotchi: {
+            screens: {
+              TamagotchiScreen: 'Tamagotchi',
+            },
+          },
+        },
+      },
+      Water: {
+        screens: {
+          Water: {
+            screens: {
+              WaterScreen: 'Water',
+            },
+          },
+        },
+      },
+      Nutrient: {
+        screens: {
+          Nutrient: {
+            screens: {
+              NutrientScreen: 'Nutrient',
+            },
+          },
+        },
+      },
+      Exercise: {
+        screens: {
+          Exercise: {
+            screens: {
+              ExerciseScreen: 'Exercise',
+            },
+          },
+        },
+      },
       NotFound: '*',
     },
   },

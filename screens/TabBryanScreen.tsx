@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 
 import { Text, View } from '../components/Themed';
 
-import styles from "../assets/styles/styles.tsx";
+import styles from "../assets/styles/styles";
 
 export default function TabBryan() {
   return (
