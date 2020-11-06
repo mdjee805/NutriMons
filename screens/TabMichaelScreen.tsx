@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { StyleSheet, Image, /*Button*/ } from 'react-native';
+import { StyleSheet, Image, Button } from 'react-native';
 
 import { Text, View } from '../components/Themed';
 
 import styles from "../assets/styles/styles";
 
-//import { TouchableOpacity, TouchableHighlight } from 'react-native-gesture-handler';
+import { TouchableOpacity, TouchableHighlight } from 'react-native-gesture-handler';
 
 import { useNavigation } from '@react-navigation/native';
 
@@ -15,13 +15,13 @@ export default function TabMichael() {
     return (
     <View style={styles.container}>
       <View style={styles.header}>
-        {/*<TouchableOpacity onPress={() => { navigation.navigate("Profile") } }>
+        <TouchableOpacity onPress={() => { navigation.navigate("Profile") } }>
           <Image style={{width:40, height:40}} source={require('../assets/images/profilePic.png')} />
         </TouchableOpacity>
                 <TouchableHighlight onPress={() => { navigation.navigate('Profile') }} >
           <Text> Move</Text>
         </TouchableHighlight>
-        <Button title="test" onPress={() => navigation.navigate("Profile")} />*/}
+        <Button title="test" onPress={() => navigation.navigate("Profile")} />
         <Text style={styles.title}>TabMichaelScreen</Text>
         <Image style={{width:40, height:40}} source={require('../assets/images/tamaPic.png')} />
       </View>
