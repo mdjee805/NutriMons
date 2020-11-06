@@ -1,97 +1,49 @@
 import * as React from 'react';
 import { StyleSheet, Image } from 'react-native';
+import styles from '../assets/styles/styles';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
 export default function TabMinhScreen() {
     return (
-
-        <View style={styles.container}>
-            <View style={styles.header}>
-
-                {/* "Nutrimons" header */}
-                <View style={styles.bluebox}>
-                    <Text style={styles.title}>NutriMons</Text>
-                </View>
-
-                {/* "Dashboard" header */}
-                <Text style={{ alignItems: 'center' }}>Dashboard</Text>
-
-
-
-
+        
+        <View style={styles.minhsContainer}>
+            {/* "NutriMons" header */}
+            <View style={{ flex: .1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'blue' }}>
+                <Text style={{ fontSize: 50, color: 'white' }}>NutriMons</Text>
             </View>
-            
 
-            
-
-            <Image style={{ width: 40, height: 40 }} source={require('../assets/images/tamaPic.png')} />
-
-            <div>{/* "Today" header */}</div>
-            <View style={{
-                width: 2000, height: 30, alignItems: 'center',
-                backgroundColor: 'blue'}}>
-                <Text style={{ fontSize: 20, fontWeight: 'normal', color: 'white' }}>Today</Text>
+            {/* "Dashboard" header */}
+            <View style={{ flex: .1, justifyContent: 'center', alignItems: 'center' }}>
+                <Text style={{ color: 'black', fontSize: 40,  }}>Dashboard</Text>
             </View>
+
+            {/* "Today" header */}
+            <View style={{ flex: .05, justifyContent: 'center', alignItems: 'center', backgroundColor: 'blue' }}>
+                <Text style={{ fontSize: 20, color: 'white' }}>Today</Text>
+            </View>  
+
+            {/* Panda bear icon*/}
+            <View style={{ flex: .1, justifyContent: 'center', alignItems: 'flex-end' }}>
+                <Image style={{ width: 50, height: 50 }} source={require('../assets/images/tamaPic.png')} />
+            </View> 
+
+            {/* "Nutrient Overview" header */}
+            <View style={{ flex: .05, justifyContent: 'center', alignItems: 'center', }}>
+                <Text style={{ fontSize: 20, color: 'black', }}>Nutrient Overview  </Text>
+            </View> 
             
 
-            <div>{/* "Nutrient Overview" header */}</div>
-            <Text style={styles.graphTitle}>
-                Nutrient Overview</Text>
+            
+
+            
+
+            
+            
         </View>
-
+            
     );
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'space-around',
-    },
-    header: {
-        flex: .1,
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-    },
-    footer: {
-        flex: .1,
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-    },
-    body: {
-        flex: .8,
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-    },
-    title: {
-        fontSize: 50,
-        fontWeight: 'bold',
-        color: 'white',
-    },
-    title1: {
-        alignItems: 'center',
-        color:'black',
-        fontSize: 30,
-        fontWeight: 'normal',
-    },
-    graphTitle: {
-        fontSize: 30,
-        fontWeight: 'normal',
-    },
-    bluebox: {
-        width: 3000,
-        height: 80,
-        alignItems: 'center',
-        backgroundColor: 'blue'
-    },
-    separator: {
 
-        height: 1,
-        width: '80%',
-    },
-});

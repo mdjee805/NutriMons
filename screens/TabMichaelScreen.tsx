@@ -3,6 +3,8 @@ import { StyleSheet, Image } from 'react-native';
 
 import { Text, View } from '../components/Themed';
 
+import styles from "../assets/styles/styles.tsx";
+
 export default function TabMichael() {
   return (
     <View style={styles.container}>
@@ -22,38 +24,3 @@ export default function TabMichael() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-  },
-  header: {
-    flex: .1,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-  },
-  footer: {
-    flex: .1,
-    flexDirection:'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-  },
-  body: {
-    flex: .8,
-    flexDirection:'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
