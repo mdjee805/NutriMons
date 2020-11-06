@@ -1,5 +1,10 @@
 export type RootStackParamList = {
   Root: undefined;
+  Profile: undefined;
+  Tamagotchi: undefined;
+  Water: undefined;
+  Nutrient: undefined;
+  Exercise: undefined;
   NotFound: undefined;
 };
 
