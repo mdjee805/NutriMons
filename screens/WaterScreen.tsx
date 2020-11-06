@@ -10,7 +10,7 @@ export default function TabMichael() {
     <View style={styles.container}>
       <View style={styles.header}>
         <Image style={{width:40, height:40}} source={require('../assets/images/profilePic.png')} />
-        <Text style={styles.title}>TabMichaelScreen</Text>
+        <Text style={styles.title}>WaterScreen</Text>
         <Image style={{width:40, height:40}} source={require('../assets/images/tamaPic.png')} />
       </View>
       <View style={styles.body}>
