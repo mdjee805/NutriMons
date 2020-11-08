@@ -8,11 +8,11 @@ import { RootStackParamList } from '../types';
 import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 
-import ProfileScreen from '../screens/ProfileScreen';
+/*import ProfileScreen from '../screens/ProfileScreen';
 import TamagotchiScreen from '../screens/TamagotchiScreen';
 import WaterScreen from '../screens/WaterScreen';
 import NutrientScreen from '../screens/NutrientScreen';
-import ExerciseScreen from '../screens/ExerciseScreen';
+import ExerciseScreen from '../screens/ExerciseScreen';*/
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -34,11 +34,11 @@ function RootNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Root" component={BottomTabNavigator} />
-      <Stack.Screen name="Profile" component={ProfileScreen} />
+      {/*<Stack.Screen name="Profile" component={ProfileScreen} />
       <Stack.Screen name="Tamagotchi" component={TamagotchiScreen} />
       <Stack.Screen name="Water" component={WaterScreen} />
       <Stack.Screen name="Nutrient" component={NutrientScreen} />
-      <Stack.Screen name="Exercise" component={ExerciseScreen} />
+      <Stack.Screen name="Exercise" component={ExerciseScreen} />*/}
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );

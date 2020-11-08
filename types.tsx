@@ -1,23 +1,48 @@
 export type RootStackParamList = {
-  Root: undefined;
-  Profile: undefined;
-  Tamagotchi: undefined;
-  Water: undefined;
-  Nutrient: undefined;
-  Exercise: undefined;
-  NotFound: undefined;
+    Root: undefined;
+    NotFound: undefined;
 };
 
 export type BottomTabParamList = {
-  TabOne: undefined;
+    TabDashboard: undefined;
+    TabProfile: undefined;
+    TabTamagotchi: undefined;
+    TabWater: undefined;
+    TabNutrient: undefined;
+    TabExercise: undefined;
+  /*TabOne: undefined;
   TabTwo: undefined;
   TabBryan: undefined;
   TabAlissa: undefined;
   TabMichael: undefined;
-  TabMinh: undefined;
+  TabMinh: undefined;*/
 };
 
-export type TabOneParamList = {
+export type TabDashboardParamList = {
+    TabDashboardScreen: undefined;
+};
+
+export type TabProfileParamList = {
+    TabProfileScreen: undefined;
+};
+
+export type TabTamagotchiParamList = {
+    TabTamagotchiScreen: undefined;
+};
+
+export type TabWaterParamList = {
+    TabWaterScreen: undefined;
+};
+
+export type TabNutrientParamList = {
+    TabNutrientScreen: undefined;
+};
+
+export type TabExerciseParamList = {
+    TabExerciseScreen: undefined;
+};
+
+/*export type TabOneParamList = {
   TabOneScreen: undefined;
 };
 
@@ -39,4 +64,4 @@ export type TabMichaelParamList = {
 
 export type TabMinhParamList = {
   TabMinhScreen: undefined;
-};
+};*/

@@ -6,6 +6,14 @@ export default {
     screens: {
       Root: {
         screens: {
+          TabDashboard: {
+            screens: {
+              TabDashboardScreen: 'Dashboard',
+            },
+          },
+        },
+      },
+        /*screens: {
           TabOne: {
             screens: {
               TabOneScreen: 'one',
@@ -82,7 +90,7 @@ export default {
             },
           },
         },
-      },
+      },*/
       NotFound: '*',
     },
   },

@@ -5,24 +5,72 @@ import * as React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import TabOneScreen from '../screens/TabOneScreen';
+import TabDashboardScreen from '../screens/TabDashboardScreen';
+import TabProfileScreen from '../screens/TabProfileScreen';
+import TabTamagotchiScreen from '../screens/TabTamagotchiScreen';
+import TabWaterScreen from '../screens/TabWaterScreen';
+import TabNutrientScreen from '../screens/TabNutrientScreen';
+import TabExerciseScreen from '../screens/TabExerciseScreen';
+/*import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import TabBryanScreen from '../screens/TabBryanScreen';
 import TabAlissaScreen from '../screens/TabAlissaScreen';
 import TabMichaelScreen from '../screens/TabMichaelScreen';
-import TabMinhScreen from '../screens/TabMinhScreen';
-import { BottomTabParamList, TabOneParamList, TabTwoParamList, TabAlissaParamList, TabBryanParamList, TabMichaelParamList, TabMinhParamList } from '../types';
+import TabMinhScreen from '../screens/TabMinhScreen';*/
+import { BottomTabParamList, TabDashboardParamList, TabProfileParamList, TabTamagotchiParamList, TabNutrientParamList, TabWaterParamList, TabExerciseParamList /*TabOneParamList, TabTwoParamList, TabAlissaParamList, TabBryanParamList, TabMichaelParamList, TabMinhParamList*/ } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function BottomTabNavigator() {
-  const colorScheme = useColorScheme();
+    const colorScheme = useColorScheme();
 
-  return (
-    <BottomTab.Navigator
-      initialRouteName="TabOne"
-      tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
-      <BottomTab.Screen
+    return (
+        <BottomTab.Navigator
+            initialRouteName="TabDashboard"
+            tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
+            <BottomTab.Screen
+                name="TabDashboard"
+                component={TabDashboardNavigator}
+                options={{
+                    tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+                }}
+            />
+            <BottomTab.Screen
+                name="TabProfile"
+                component={TabProfileNavigator}
+                options={{
+                    tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+                }}
+            />
+            <BottomTab.Screen
+                name="TabTamagotchi"
+                component={TabTamagotchiNavigator}
+                options={{
+                    tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+                }}
+            />
+            <BottomTab.Screen
+                name="TabNutrient"
+                component={TabNutrientNavigator}
+                options={{
+                    tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+                }}
+            />
+            <BottomTab.Screen
+                name="TabWater"
+                component={TabWaterNavigator}
+                options={{
+                    tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+                }}
+            />
+            <BottomTab.Screen
+                name="TabExercise"
+                component={TabExerciseNavigator}
+                options={{
+                    tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+                }}
+            />
+      {/*<BottomTab.Screen
         name="TabOne"
         component={TabOneNavigator}
         options={{
@@ -63,9 +111,9 @@ export default function BottomTabNavigator() {
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
         }}
-      />
-    </BottomTab.Navigator>
-  );
+      />*/}
+        </BottomTab.Navigator>
+    );
 }
 
 // You can explore the built-in icon families and icons on the web at:
@@ -76,7 +124,90 @@ function TabBarIcon(props: { name: string; color: string }) {
 
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
-const TabOneStack = createStackNavigator<TabOneParamList>();
+const TabDashboardStack = createStackNavigator<TabDashboardParamList>();
+
+function TabDashboardNavigator() {
+    return (
+        <TabDashboardStack.Navigator>
+            <TabDashboardStack.Screen
+                name="TabDashboardScreen"
+                component={TabDashboardScreen}
+                options={{ headerTitle: 'Dashboard' }}
+            />
+        </TabDashboardStack.Navigator>
+    );
+}
+
+const TabProfileStack = createStackNavigator<TabProfileParamList>();
+
+function TabProfileNavigator() {
+    return (
+        <TabProfileStack.Navigator>
+            <TabProfileStack.Screen
+                name="TabProfileScreen"
+                component={TabProfileScreen}
+                options={{ headerTitle: 'Profile' }}
+            />
+        </TabProfileStack.Navigator>
+    );
+}
+
+const TabTamagotchiStack = createStackNavigator<TabTamagotchiParamList>();
+
+function TabTamagotchiNavigator() {
+    return (
+        <TabTamagotchiStack.Navigator>
+            <TabTamagotchiStack.Screen
+                name="TabTamagotchiScreen"
+                component={TabTamagotchiScreen}
+                options={{ headerTitle: 'Tamagotchi' }}
+            />
+        </TabTamagotchiStack.Navigator>
+    );
+}
+
+const TabNutrientStack = createStackNavigator<TabNutrientParamList>();
+
+function TabNutrientNavigator() {
+    return (
+        <TabNutrientStack.Navigator>
+            <TabNutrientStack.Screen
+                name="TabNutrientScreen"
+                component={TabNutrientScreen}
+                options={{ headerTitle: 'Nutrients' }}
+            />
+        </TabNutrientStack.Navigator>
+    );
+}
+
+const TabWaterStack = createStackNavigator<TabWaterParamList>();
+
+function TabWaterNavigator() {
+    return (
+        <TabWaterStack.Navigator>
+            <TabWaterStack.Screen
+                name="TabWaterScreen"
+                component={TabWaterScreen}
+                options={{ headerTitle: 'Water' }}
+            />
+        </TabWaterStack.Navigator>
+    );
+}
+
+const TabExerciseStack = createStackNavigator<TabExerciseParamList>();
+
+function TabExerciseNavigator() {
+    return (
+        <TabExerciseStack.Navigator>
+            <TabExerciseStack.Screen
+                name="TabExerciseScreen"
+                component={TabExerciseScreen}
+                options={{ headerTitle: 'Exercises' }}
+            />
+        </TabExerciseStack.Navigator>
+    );
+}
+/*const TabOneStack = createStackNavigator<TabOneParamList>();
 
 function TabOneNavigator() {
   return (
@@ -158,4 +289,4 @@ function TabMinhNavigator() {
       />
     </TabMinhStack.Navigator>
   );
-}
+}*/
