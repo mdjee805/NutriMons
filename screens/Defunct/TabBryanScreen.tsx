@@ -17,10 +17,7 @@ export default function TabBryanScreen() {
 
             {/* Button box */}
             <View style={bbStyle.botBox}>
-                <Button
-                    title="Press me"
-                    onPress={() => Alert.alert('Simple Button pressed')}
-                />
+                <Text style={bbTextStyle.buttons}>Button 1</Text>
                 <Text style={bbTextStyle.buttons}>Button 2</Text>
                 <Text style={bbTextStyle.buttons}>Button 3</Text>
             </View>
