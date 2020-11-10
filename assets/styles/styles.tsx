@@ -7,23 +7,14 @@ export default StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'space-around',
     },
-    header: {
-        flex: .1,
+    rowContainer: { //add a flex
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center',
     },
-    footer: {
-        flex: .1,
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-    },
-    body: {
-        flex: .8,
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center',
+    itemContainer: {
+        flex: 1,
+        backgroundColor: "lightblue"
     },
     title: {
         fontSize: 20,

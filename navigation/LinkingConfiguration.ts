@@ -11,8 +11,33 @@ export default {
               TabDashboardScreen: 'Dashboard',
             },
           },
+          TabProfile: {
+            screens: {
+              TabProfileScreen: 'TabProfileScreen',
+            },
+           },
+           TabTamagotchi: {
+             screens: {
+               TabTamagotchiScreen: 'Tamagotchi',
+             },
+           },
+           TabNutrient: {
+             screens: {
+               TabNutrientScreen: 'Nutrient',
+              },
+            },
+           TabWater: {
+             screens: {
+               TabWaterScreen: 'Water',
+              },
+            },
+            TabExercise: {
+              screens: {
+                TabExerciseScreen: 'Exercise',
+              },
+            },
+          },
         },
-      },
         /*screens: {
           TabOne: {
             screens: {
