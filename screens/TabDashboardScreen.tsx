@@ -17,11 +17,11 @@ export default function TabDashboard() {
   return (
     <View style={styles.container}>
       <View style={dashboard.top}>
-          <View style={{flexDirection: "row", margin: 5}}>
+          <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", margin: 0}}>
               <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2 }}>
                   <SafeAreaView>
                       <TouchableOpacity onPress={() => { navigation.navigate("Profile") } }>
-                          <Image style={{width:40, height:40}} source={require('../assets/images/profilePic.png')} />
+                          <Image style={{width: 40, height: 40, flex: 1}} source={require('../assets/images/profilePic.png')} />
                       </TouchableOpacity>
                   </SafeAreaView>
               </View>
@@ -33,7 +33,7 @@ export default function TabDashboard() {
               <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2, alignItems: 'flex-end'}}>
                   <SafeAreaView style={{ flex: 1 }}>
                       <TouchableOpacity onPress={() => { navigation.navigate("Tamagotchi") } }>
-                         <Image style={{ width: 40, height: 40 }} source={require('../assets/images/tamaPic.png')} />
+                         <Image style={{ width: 40, height: 40, flex: 1 }} source={require('../assets/images/tamaPic.png')} />
                       </TouchableOpacity>
                   </SafeAreaView>
               </View>
@@ -79,13 +79,13 @@ export default function TabDashboard() {
           </View>
         </View>
       <View style={dashboard.bottom}>
-        <Text style={{fontSize: 20, fontWeight: 'bold',  textAlign: 'center', color: '#0400ff'}}>
+        <Text style={{fontSize: 20, fontWeight: 'bold',  textAlign: 'center', color: '#0400ff', flex: 1}}>
             Today's Fun Fact
         </Text>
-        <Text style={{fontSize: 20, fontWeight: 'bold',  textAlign: 'left', padding: 10}}>
+        <Text style={{fontSize: 20, fontWeight: 'bold',  textAlign: 'left', padding: 10, flex: 1}}>
             Did you know that ........................
         </Text>
-        <Text style={{fontSize: 20, fontWeight: 'bold',  textAlign: 'left', padding: 10}}>
+        <Text style={{fontSize: 20, fontWeight: 'bold',  textAlign: 'left', padding: 10, flex: 1}}>
             To learn more go to [website]
         </Text>
       </View>
@@ -97,8 +97,10 @@ export default function TabDashboard() {
 const dashboard = StyleSheet.create({
   title: {
     textAlign: 'center',
-    fontSize: 40,
+    fontSize: 36,
     fontWeight: 'bold',
+    backgroundColor: "rgba(255, 255, 255, 0)",
+    flex: 1
   },
   top: {
     backgroundColor: "lightblue",
@@ -109,7 +111,7 @@ const dashboard = StyleSheet.create({
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
+    borderBottomRightRadius: 20
   },
   middle: {
     flex: 0.7, 
@@ -121,12 +123,13 @@ const dashboard = StyleSheet.create({
     borderBottomLeftRadius: 20, 
     borderBottomRightRadius: 20,
     justifyContent: 'space-evenly', 
+    backgroundColor: "lightblue"
   },
   bottom: {
     margin: 30,
     marginTop: 0,
     flex: 0.2,
-    backgroundColor: "#fff",
+    backgroundColor: "lightblue",
     borderWidth: 2,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
