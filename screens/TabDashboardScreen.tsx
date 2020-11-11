@@ -62,7 +62,7 @@ export default function TabDashboard() {
               <Text style={{fontSize: 20, fontWeight: 'bold',  textAlign: 'center'}}>
                   Calories Needed: 400
               </Text>
-              <PieChart
+              {/*<PieChart
               data={[
                 {title: 'Consumed', value: 1600, color: '#36A832'},
                 {title: 'Needed', value: 400, color: '#C13C37'},
@@ -72,7 +72,7 @@ export default function TabDashboard() {
                 textAlign: 'center'
               }}
               label={({ dataEntry }) => `${Math.round(dataEntry.percentage)} %`}
-              />
+              />*/}
               <Text style={{fontSize: 20, fontWeight: 'bold',  textAlign: 'center'}}>
                   Calories Consumed: 1600
               </Text>
