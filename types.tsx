@@ -8,7 +8,10 @@ export type BottomTabParamList = {
     TabProfile: undefined;
     TabTamagotchi: undefined;
     TabWater: undefined;
-    TabNutrient: undefined;
+    TabMeal: undefined;
+    TabAddMeal: undefined;
+    TabMealPlan: undefined;
+    TabBarcode: undefined;
     TabExercise: undefined;
     TabNutrientInformation: undefined;
     TabNutrientOverview: undefined;
@@ -37,8 +40,16 @@ export type TabWaterParamList = {
     TabWaterScreen: undefined;
 };
 
-export type TabNutrientParamList = {
-    TabNutrientScreen: undefined;
+export type TabMealParamList = {
+    TabMealScreen: undefined;
+};
+
+export type TabAddMealParamList = {
+    TabAddMealScreen: undefined;
+};
+
+export type TabMealPlanParamList = {
+    TabMealPlanScreen: undefined;
 };
 
 export type TabExerciseParamList = {
