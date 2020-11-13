@@ -44,13 +44,13 @@ export default function TabDashboard() {
               <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "column", flex: 1, justifyContent: 'space-around'}}>
                   <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flex: 1}} />
                   <View style={{backgroundColor: "lightblue", flex: 1}}>
-                      <Button title="Add Meal" onPress={() => navigation.navigate("Nutrient")} />
+                      <Button title="Add Meal" onPress={() => navigation.navigate("Meal")} />
                   </View>
                   <View style={{backgroundColor: "lightblue", flex: 1}}>
-                      <Button title="Add Water" onPress={() => navigation.navigate("Exercise")} />
+                      <Button title="Add Water" onPress={() => navigation.navigate("Water")} />
                   </View>
                   <View style={{backgroundColor: "lightblue", flex: 1}}>
-                      <Button title="Add Exercise" onPress={() => navigation.navigate("Water")} />
+                      <Button title="Add Exercise" onPress={() => navigation.navigate("Exercise")} />
                   </View>
                   <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 1 }} />
               </View>
@@ -62,6 +62,8 @@ export default function TabDashboard() {
               <Text style={{fontSize: 20, fontWeight: 'bold',  textAlign: 'center'}}>
                   Calories Needed: 400
               </Text>
+              {
+              /*
               <PieChart
               data={[
                 {title: 'Consumed', value: 1600, color: '#36A832'},
@@ -73,6 +75,8 @@ export default function TabDashboard() {
               }}
               label={({ dataEntry }) => `${Math.round(dataEntry.percentage)} %`}
               />
+              */
+              }
               <Text style={{fontSize: 20, fontWeight: 'bold',  textAlign: 'center'}}>
                   Calories Consumed: 1600
               </Text>

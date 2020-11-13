@@ -9,15 +9,20 @@ import TabDashboardScreen from '../screens/TabDashboardScreen';
 import TabProfileScreen from '../screens/TabProfileScreen';
 import TabTamagotchiScreen from '../screens/TabTamagotchiScreen';
 import TabWaterScreen from '../screens/TabWaterScreen';
-import TabNutrientScreen from '../screens/TabNutrientScreen';
+import TabMealScreen from '../screens/TabMealScreen';
+import TabMealPlanScreen from '../screens/TabMealPlanScreen';
+import TabBarcodeScreen from '../screens/TabScanBarcodeScreen';
+// import TabNutrientScreen from '../screens/TabNutrientScreen';
 import TabExerciseScreen from '../screens/TabExerciseScreen';
+
 /*import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import TabBryanScreen from '../screens/TabBryanScreen';
 import TabAlissaScreen from '../screens/TabAlissaScreen';
 import TabMichaelScreen from '../screens/TabMichaelScreen';
 import TabMinhScreen from '../screens/TabMinhScreen';*/
-import { BottomTabParamList, TabDashboardParamList, TabProfileParamList, TabTamagotchiParamList, TabNutrientParamList, TabWaterParamList, TabExerciseParamList /*TabOneParamList, TabTwoParamList, TabAlissaParamList, TabBryanParamList, TabMichaelParamList, TabMinhParamList*/ } from '../types';
+import { BottomTabParamList, TabDashboardParamList, TabProfileParamList, TabTamagotchiParamList, TabMealParamList, TabMealPlanParamList, TabBarcodeParamList, TabWaterParamList, TabExerciseParamList 
+/*TabOneParamList, TabTwoParamList, TabAlissaParamList, TabBryanParamList, TabMichaelParamList, TabMinhParamList*/ } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -37,6 +42,7 @@ export default function BottomTabNavigator() {
             />
             <BottomTab.Screen
                 name="TabProfile"
+                name="TabProfile"
                 component={TabProfileNavigator}
                 options={{
                     tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
@@ -50,8 +56,22 @@ export default function BottomTabNavigator() {
                 }}
             />
             <BottomTab.Screen
-                name="TabNutrient"
-                component={TabNutrientNavigator}
+                name="TabMeal"
+                component={TabMealNavigator}
+                options={{
+                    tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+                }}
+            />
+            <BottomTab.Screen
+                name="TabMealPlan"
+                component={TabMealPlanNavigator}
+                options={{
+                    tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+                }}
+            />
+            <BottomTab.Screen
+                name="TabBarcode"
+                component={TabBarcodeNavigator}
                 options={{
                     tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
                 }}
@@ -166,20 +186,47 @@ function TabTamagotchiNavigator() {
     );
 }
 
-const TabNutrientStack = createStackNavigator<TabNutrientParamList>();
+const TabMealStack = createStackNavigator<TabMealParamList>();
 
-function TabNutrientNavigator() {
+function TabMealNavigator() {
     return (
-        <TabNutrientStack.Navigator>
-            <TabNutrientStack.Screen
-                name="TabNutrientScreen"
-                component={TabNutrientScreen}
-                options={{ headerTitle: 'Nutrients' }}
+        <TabMealStack.Navigator>
+            <TabMealStack.Screen
+                name="TabMealScreen"
+                component={TabMealScreen}
+                options={{ headerTitle: 'Meal' }}
             />
-        </TabNutrientStack.Navigator>
+        </TabMealStack.Navigator>
     );
 }
 
+const TabMealPlanStack = createStackNavigator<TabMealPlanParamList>();
+
+function TabMealPlanNavigator() {
+    return (
+        <TabMealPlanStack.Navigator>
+            <TabMealPlanStack.Screen
+                name="TabMealPlanScreen"
+                component={TabMealPlanScreen}
+                options={{ headerTitle: 'Meal Plan' }}
+            />
+        </TabMealPlanStack.Navigator>
+    );
+}
+
+const TabBarcodeStack = createStackNavigator<TabBarcodeParamList>();
+
+function TabBarcodeNavigator() {
+    return (
+        <TabMealStack.Navigator>
+            <TabMealStack.Screen
+                name="TabBarcodeScreen"
+                component={TabBarcodeScreen}
+                options={{ headerTitle: 'Scan Barcode' }}
+            />
+        </TabMealStack.Navigator>
+    );
+}
 const TabWaterStack = createStackNavigator<TabWaterParamList>();
 
 function TabWaterNavigator() {
