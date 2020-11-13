@@ -52,53 +52,46 @@ export default function TabMeal() {
                 </View>
             </View>
         </View>
-        <View style={mealPlan.bottom}>
-            <View style={{ backgroundColor: "lightblue", flex: 1, borderTopLeftRadius: 20, borderTopRightRadius: 20, borderBottomLeftRadius: 20, borderBottomRightRadius: 20, justifyContent: 'space-evenly', alignItems: 'center'}}>
-                    <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2}} />
-                    <View style={{backgroundColor: "lightblue", flex: 0.2, alignItems: 'center'}}>
-                        <SelectSearch 
-                            className="select-search select-search--multiple"
-                            options={options} 
-                            multiple
-                            search
-                            name="meal" 
-                            placeholder="Select your breakfast" 
-                        />
-                    </View>
-                    <View style={{backgroundColor: "lightblue", flex: 0.2}}/>
-                    <View style={{backgroundColor: "lightblue", flex: 0.2, alignItems: 'center'}}>
-                        <SelectSearch 
-                            className="select-search select-search--multiple"
-                            options={options} 
-                            multiple
-                            search
-                            name="meal" 
-                            placeholder="Select your lunch" 
-                        />
-                    </View>
-                    <View style={{backgroundColor: "lightblue", flex: 0.2}}/>
-                    <View style={{backgroundColor: "lightblue", flex: 0.2, alignItems: 'center'}}>
-                        <SelectSearch 
-                            className="select-search select-search--multiple"
-                            options={options} 
-                            multiple
-                            search
-                            name="meal" 
-                            placeholder="Select your dinner" 
-                        />
-                    </View>
-                    <View style={{backgroundColor: "lightblue", flex: 0.2}}/>
-                    <View style={{backgroundColor: "lightblue", flex: 0.2, alignItems: 'center'}}>
-                        <SelectSearch 
-                            className="select-search select-search--multiple"
-                            options={options} 
-                            multiple
-                            search
-                            name="meal" 
-                            placeholder="Select your snacks" 
-                        />
-                    </View>
-                    <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2 }} />
+        <View style={mealPlan.bottom}>   
+            <View style={{backgroundColor: "lightblue", flex: 0.2, alignItems: 'center'}}>
+                <SelectSearch 
+                    className="select-search select-search--multiple"
+                    options={options} 
+                    multiple
+                    search
+                    name="meal" 
+                    placeholder="Select your breakfast" 
+                />
+            </View>
+            <View style={{backgroundColor: "lightblue", flex: 0.2, alignItems: 'center'}}>
+                <SelectSearch 
+                    className="select-search select-search--multiple"
+                    options={options} 
+                    multiple
+                    search
+                    name="meal" 
+                    placeholder="Select your lunch" 
+                />
+            </View>
+            <View style={{backgroundColor: "lightblue", flex: 0.2, alignItems: 'center'}}>
+                <SelectSearch 
+                    className="select-search select-search--multiple"
+                    options={options} 
+                    multiple
+                    search
+                    name="meal" 
+                    placeholder="Select your dinner" 
+                />
+            </View>
+            <View style={{backgroundColor: "lightblue", flex: 0.2, alignItems: 'center'}}>      
+                <SelectSearch 
+                    className="select-search select-search--multiple"
+                    options={options} 
+                    multiple
+                    search
+                    name="meal" 
+                    placeholder="Select your snacks" 
+                />
             </View>
         </View>
     </View>
@@ -125,8 +118,7 @@ const mealPlan = StyleSheet.create({
     borderBottomRightRadius: 20
   },
   bottom: {
-    flex: 0.9, 
-    flexDirection: "row", 
+    flex: 0.9,  
     margin: 30, 
     borderWidth: 2, 
     borderTopLeftRadius: 20, 
@@ -134,6 +126,7 @@ const mealPlan = StyleSheet.create({
     borderBottomLeftRadius: 20, 
     borderBottomRightRadius: 20,
     justifyContent: 'space-evenly', 
-    backgroundColor: "rgba(255, 255, 255, 0)"
+    alignItems: 'center',
+    backgroundColor: "lightblue"
   },
 });
