@@ -39,7 +39,7 @@ export default function TabDashboard() {
               </View>
           </View>
       </View>
-        <View style={dashboard.middle}>
+      <View style={dashboard.middle}>
           <View style={{ backgroundColor: "lightblue", flex: 0.3, borderTopLeftRadius: 20, borderTopRightRadius: 20, borderBottomLeftRadius: 20, borderBottomRightRadius: 20}}>
               <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "column", flex: 1, justifyContent: 'space-around'}}>
                   <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flex: 1}} />
@@ -77,7 +77,7 @@ export default function TabDashboard() {
                   Calories Consumed: 1600
               </Text>
           </View>
-        </View>
+      </View>
       <View style={dashboard.bottom}>
         <Text style={{fontSize: 16, fontWeight: 'bold',  textAlign: 'center', color: '#0400ff', flex: 1}}>
             Today's Fun Fact
