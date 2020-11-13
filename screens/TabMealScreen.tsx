@@ -48,7 +48,7 @@ export default function TabMeal() {
                         <View style={{backgroundColor: "lightblue", flex: 1, marginBottom: 20}}>
                             <Button title="Scan Barcode" onPress={() => navigation.navigate("Barcode")} />
                             <SafeAreaView style = {{marginTop: 20, justifyContent: "center", alignItems: "center"}}>
-                                <TouchableOpacity onPress={() => { navigation.navigate("Barcode") } }>
+                                <TouchableOpacity onPress={() => navigation.navigate("Barcode") }>
                                     <Image style={{width: win.width*0.6, height: 704 * ratio, flex: 1 }} source={require('../assets/images/barcode.png')} />
                                 </TouchableOpacity>
                             </SafeAreaView>

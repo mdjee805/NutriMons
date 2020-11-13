@@ -182,7 +182,7 @@ export default class App extends React.Component{
 */
 }
 
-const UselessTextInput = () => {
+const MealPlan = () => {
   const [nameOfFoodValue, nameOfFoodOnChangeText] = React.useState('Type the food name...');
   const [servingSizeValue, servingSizeOnChangeText] = React.useState('Serving Size');
   const [servingWeightValue, servingWeightOnChangeText] = React.useState('Serving Weight (in grams)');
@@ -261,7 +261,7 @@ const UselessTextInput = () => {
   );
 }
 
-export default UselessTextInput;
+export default MealPlan;
 
 const textInputStyles = StyleSheet.create({
    container: {
@@ -284,4 +284,4 @@ const textInputStyles = StyleSheet.create({
       color: 'white',
       textAlign: 'center'
    }
-})
+});
