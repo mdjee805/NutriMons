@@ -56,7 +56,7 @@ export default function TabMeal() {
             <View style={{ backgroundColor: "lightblue", flex: 1, borderTopLeftRadius: 20, borderTopRightRadius: 20, borderBottomLeftRadius: 20, borderBottomRightRadius: 20}}>
                     <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2}} />
                     <View style={{backgroundColor: "lightblue", flex: 1, justifyContent: 'space-evenly', alignItems: 'center'}}>
-                    
+                        
                     </View>
                     <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2 }} />
             </View>
