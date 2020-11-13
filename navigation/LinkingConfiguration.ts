@@ -21,11 +21,26 @@ export default {
                TabTamagotchiScreen: 'Tamagotchi',
              },
            },
-           TabNutrient: {
+           TabMeal: {
              screens: {
-               TabNutrientScreen: 'Nutrient',
+               TabMealScreen: 'Meal',
               },
-            },
+           },
+           TabAddMeal: {
+             screens: {
+               TabAddMealScreen: 'AddMeal',
+              },
+           },
+           TabMealPlan: {
+             screens: {
+               TabMealPlanScreen: 'MealPlan',
+              },
+           },
+           TabBarcode: {
+             screens: {
+               TabBarcodeScreen: 'ScanBarcode',
+              },
+           },
            TabWater: {
              screens: {
                TabWaterScreen: 'Water',
