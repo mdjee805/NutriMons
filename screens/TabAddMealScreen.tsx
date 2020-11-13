@@ -218,7 +218,7 @@ const UselessTextInput = () => {
                     <View style={{flex: 0.15, width: win.width*0.5}}>
                         <Text style={{fontSize: 20, fontWeight: 'bold'}}>Name of Food:                              </Text>
                         <TextInput
-                            style={{ height: 40, paddingLeft: 10, borderColor: 'gray', borderWidth: 1 }}
+                            style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
                             onChangeText={text => nameOfFoodOnChangeText(text)}
                             value={nameOfFoodValue}
                         />
@@ -226,7 +226,7 @@ const UselessTextInput = () => {
                     <View style={{flex: 0.15, width: win.width*0.2}}>
                         <Text style={{fontSize: 20, fontWeight: 'bold'}}>Serving Size:             </Text>
                         <TextInput
-                            style={{ height: 40, paddingLeft: 10, borderColor: 'gray', borderWidth: 1 }}
+                            style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
                             onChangeText={text => servingSizeOnChangeText(text)}
                             value={servingSizeValue}
                         />
@@ -234,7 +234,7 @@ const UselessTextInput = () => {
                     <View style={{flex: 0.15, width: win.width*0.2}}>
                         <Text style={{fontSize: 20, fontWeight: 'bold'}}>Serving Weight:       </Text>
                         <TextInput
-                            style={{ height: 40, paddingLeft: 10, borderColor: 'gray', borderWidth: 1 }}
+                            style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
                             onChangeText={text => servingWeightOnChangeText(text)}
                             value={servingWeightValue}
                         />
@@ -242,7 +242,7 @@ const UselessTextInput = () => {
                     <View style={{flex: 0.15, width: win.width*0.2}}>
                         <Text style={{fontSize: 20, fontWeight: 'bold'}}>Calories:                   </Text>
                         <TextInput
-                            style={{ height: 40, paddingLeft: 10, borderColor: 'gray', borderWidth: 1 }}
+                            style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
                             onChangeText={text => caloriesOnChangeText(text)}
                             value={caloriesValue}
                         />
