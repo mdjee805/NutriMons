@@ -5,7 +5,7 @@ import { Text, View } from '../components/Themed';
 
 import styles from "../assets/styles/styles";
 
-export default function TabMichael() {
+export default function TabExercise() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>

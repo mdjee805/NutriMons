@@ -19,11 +19,11 @@ export default function TabDashboard() {
       <View style={dashboard.top}>
           <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", margin: 0}}>
               <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2 }}>
-                  {/*<SafeAreaView>
+                  <SafeAreaView>
                       <TouchableOpacity onPress={() => { navigation.navigate("Profile") } }>
                           <Image style={{width: 40, height: 40, flex: 1}} source={require('../assets/images/profilePic.png')} />
                       </TouchableOpacity>
-                  </SafeAreaView>*/}
+                  </SafeAreaView>
               </View>
               <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.6 }}>
                 <Text style={[dashboard.title, { flex: 1 }]}>
@@ -31,11 +31,11 @@ export default function TabDashboard() {
                 </Text>
               </View>
               <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2, alignItems: 'flex-end'}}>
-                  {/*<SafeAreaView style={{ flex: 1 }}>
+                  <SafeAreaView style={{ flex: 1 }}>
                       <TouchableOpacity onPress={() => { navigation.navigate("Tamagotchi") } }>
                          <Image style={{ width: 40, height: 40, flex: 1 }} source={require('../assets/images/tamaPic.png')} />
                       </TouchableOpacity>
-                  </SafeAreaView>*/}
+                  </SafeAreaView>
               </View>
           </View>
       </View>

@@ -12,7 +12,8 @@ import ProfileScreen from '../screens/TabProfileScreen';
 import TamagotchiScreen from '../screens/TabTamagotchiScreen';
 import WaterScreen from '../screens/TabWaterScreen';
 import MealScreen from '../screens/TabMealScreen';
-import MealPlanScreen from '../screens/TabMealPlanScreen';
+import AddMealScreen from '../screens/TabMealPlanScreen';
+import MealPlanScreen from '../screens/TabAddMealScreen';
 import BarcodeScreen from '../screens/TabScanBarcodeScreen';
 //import NutrientScreen from '../screens/TabNutrientScreen';
 import ExerciseScreen from '../screens/TabExerciseScreen';
@@ -43,6 +44,7 @@ function RootNavigator() {
       <Stack.Screen name="Tamagotchi" component={TamagotchiScreen} />
       <Stack.Screen name="Water" component={WaterScreen} />
       <Stack.Screen name="Meal" component={MealScreen} />
+      <Stack.Screen name="AddMeal" component={AddMealScreen} />
       <Stack.Screen name="MealPlan" component={MealPlanScreen} />
       <Stack.Screen name="Barcode" component={BarcodeScreen} />
       {/*<Stack.Screen name="Nutrient" component={NutrientScreen} />*/}

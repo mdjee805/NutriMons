@@ -8,51 +8,26 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import { useNavigation } from '@react-navigation/native';
 
-import  SearchableDropdown from 'react-native-searchable-dropdown';; // npm install --save react-native-searchable-dropdown (https://reactnativeexample.com/searchable-dropdown-help-you-to-search-with-in-the-dropdown/)
+import SelectSearch from 'react-select-search'; // npm install react-select-search --save (https://reactjsexample.com/react-powered-select-box-with-filter/)
+
+import '../assets/styles/style.css';
+
+const options = [
+    {name: 'Apple Pie'},
+    {name: 'Banana'},
+    {name: 'Chicken Noodle Soup'},
+    {name: 'Eggs'},
+    {name: 'Greek Yogurt'},
+    {name: 'Tomato Sauce Pasta'},
+    {name: 'White Rice'},
+];
 
 export default function TabMeal() {
-  const [ data, setData ] = React.useState('Not Found');
   const navigation = useNavigation();
   const win = Dimensions.get('window');
   const ratio = (win.width*0.6)/1280; // actual width of image is 1280
-  /*
-  var  items  = [
-	{
-		id: 1,
-		name: 'Apple pie'
-	},
-	{
-		id: 2,
-		name: 'Bread'
-	},
-	{
-		id: 3,
-		name: 'Deep-Fried Chicken'
-	},
-	{
-		id: 4,
-		name: 'Mongolian Beef'
-	},
-	{
-		id: 5,
-		name: 'Pizza'
-	},
-	{
-		id: 6,
-		name: 'Cheddar soup'
-	},
-	{
-		id: 7,
-		name: 'Tomato Sauce Pasta'
-	},
-	{
-		id: 8,
-		name: 'White Rice'
-	},
-];
-*/
+
   return (
-  { /*
     <View style={styles.container}>
         <View style={mealPlan.top}>
             <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", margin: 0}}>
@@ -78,57 +53,55 @@ export default function TabMeal() {
             </View>
         </View>
         <View style={mealPlan.bottom}>
-            <View style={{ backgroundColor: "lightblue", flex: 1, borderTopLeftRadius: 20, borderTopRightRadius: 20, borderBottomLeftRadius: 20, borderBottomRightRadius: 20}}>
-                <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "column", flex: 1, justifyContent: 'space-around'}}>
-                    <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flex: 1}} />
-                        <View style={{backgroundColor: "lightblue", flex: 1}}>
-                        {
-                        /*
-                            <SearchableDropDown
-			                    onTextChange={(text) =>  alert(text)}
-			                    onItemSelect={(item) =>  alert(JSON.stringify(item))}
-			                    containerStyle={{
-				                    padding: 5
-			                    }}
-			                    textInputStyle={{
-				                    padding: 12,
-				                    borderWidth: 1,
-				                    borderColor: '#ccc',
-				                    borderRadius: 5
-			                    }}
-			                    itemStyle={{
-				                    padding: 10,
-			                        marginTop: 2,
-				                    backgroundColor: '#ddd',
-				                    borderColor: '#bbb',
-				                    borderWidth: 1,
-				                    borderRadius:5
-			                    }}
-			                    itemTextStyle={{
-			                    color: '#222'
-			                    }}
-			                    itemsContainerStyle={{
-				                    maxHeight: 140
-			                    }}
-			                    items={items}
-			                    placeholder="Placeholder."
-			                    resetValue={false}
-			                    underlineColorAndroid='transparent' />
-                        </View>
-                        }
-                        <View style={{backgroundColor: "lightblue", flex: 1}}>
-                            
-                        </View>
-                        <View style={{backgroundColor: "lightblue", flex: 1}}>
-                           
-                        </View>
-                    <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 1 }} />
-                </View>
+            <View style={{ backgroundColor: "lightblue", flex: 1, borderTopLeftRadius: 20, borderTopRightRadius: 20, borderBottomLeftRadius: 20, borderBottomRightRadius: 20, justifyContent: 'space-evenly', alignItems: 'center'}}>
+                    <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2}} />
+                    <View style={{backgroundColor: "lightblue", flex: 0.2, alignItems: 'center'}}>
+                        <SelectSearch 
+                            className="select-search select-search--multiple"
+                            options={options} 
+                            multiple
+                            search
+                            name="meal" 
+                            placeholder="Select your breakfast" 
+                        />
+                    </View>
+                    <View style={{backgroundColor: "lightblue", flex: 0.2}}/>
+                    <View style={{backgroundColor: "lightblue", flex: 0.2, alignItems: 'center'}}>
+                        <SelectSearch 
+                            className="select-search select-search--multiple"
+                            options={options} 
+                            multiple
+                            search
+                            name="meal" 
+                            placeholder="Select your lunch" 
+                        />
+                    </View>
+                    <View style={{backgroundColor: "lightblue", flex: 0.2}}/>
+                    <View style={{backgroundColor: "lightblue", flex: 0.2, alignItems: 'center'}}>
+                        <SelectSearch 
+                            className="select-search select-search--multiple"
+                            options={options} 
+                            multiple
+                            search
+                            name="meal" 
+                            placeholder="Select your dinner" 
+                        />
+                    </View>
+                    <View style={{backgroundColor: "lightblue", flex: 0.2}}/>
+                    <View style={{backgroundColor: "lightblue", flex: 0.2, alignItems: 'center'}}>
+                        <SelectSearch 
+                            className="select-search select-search--multiple"
+                            options={options} 
+                            multiple
+                            search
+                            name="meal" 
+                            placeholder="Select your snacks" 
+                        />
+                    </View>
+                    <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2 }} />
             </View>
         </View>
     </View>
-  */
-    }
   );
 }
 

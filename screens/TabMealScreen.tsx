@@ -55,21 +55,7 @@ export default function TabMeal() {
                         </View>
                         <View style={{backgroundColor: "lightblue", flex: 0.2}}/>
                         <View style={{backgroundColor: "lightblue", flex: 1}}>
-                            {/*<Button title="Manually Add Meal" onPress={() => navigation.navigate("AddMeal")} />*/}
-                            {
-                            /*
-                            <Menu>
-                                <MenuTrigger text="Manually Add Meal" />
-
-                                <MenuOptions>
-                                    <MenuOption onSelect={() => navigation.navigate("AddMeal") text="Save" />
-                                    <MenuOption onSelect={() => alert(`Delete`)}>
-                                    <Text style={{ color: 'red' }}>Delete</Text>
-                                    </MenuOption>
-                                </MenuOptions>
-                            </Menu>
-                            */
-                            }
+                            <Button title="Manually Add Meal" onPress={() => navigation.navigate("AddMeal")} />
                         </View>
                         <View style={{backgroundColor: "lightblue", flex: 1}}>
                             <Button title="Create Meal Plan" onPress={() => navigation.navigate("MealPlan")} />
