@@ -19,23 +19,23 @@ export default function TabDashboard() {
       <View style={dashboard.top}>
           <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", margin: 0}}>
               <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2 }}>
-                  <SafeAreaView>
+                  {/*<SafeAreaView>
                       <TouchableOpacity onPress={() => { navigation.navigate("Profile") } }>
                           <Image style={{width: 40, height: 40, flex: 1}} source={require('../assets/images/profilePic.png')} />
                       </TouchableOpacity>
-                  </SafeAreaView>
+                  </SafeAreaView>*/}
               </View>
               <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.6 }}>
-                <Text style={dashboard.title}>
+                <Text style={[dashboard.title, { flex: 1 }]}>
                     Dashboard
                 </Text>
               </View>
               <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2, alignItems: 'flex-end'}}>
-                  <SafeAreaView style={{ flex: 1 }}>
+                  {/*<SafeAreaView style={{ flex: 1 }}>
                       <TouchableOpacity onPress={() => { navigation.navigate("Tamagotchi") } }>
                          <Image style={{ width: 40, height: 40, flex: 1 }} source={require('../assets/images/tamaPic.png')} />
                       </TouchableOpacity>
-                  </SafeAreaView>
+                  </SafeAreaView>*/}
               </View>
           </View>
       </View>
@@ -62,9 +62,7 @@ export default function TabDashboard() {
               <Text style={{fontSize: 20, fontWeight: 'bold',  textAlign: 'center'}}>
                   Calories Needed: 400
               </Text>
-              {
-              /*
-              <PieChart
+              {/*<PieChart
               data={[
                 {title: 'Consumed', value: 1600, color: '#36A832'},
                 {title: 'Needed', value: 400, color: '#C13C37'},
@@ -74,22 +72,20 @@ export default function TabDashboard() {
                 textAlign: 'center'
               }}
               label={({ dataEntry }) => `${Math.round(dataEntry.percentage)} %`}
-              />
-              */
-              }
+              />*/}
               <Text style={{fontSize: 20, fontWeight: 'bold',  textAlign: 'center'}}>
                   Calories Consumed: 1600
               </Text>
           </View>
         </View>
       <View style={dashboard.bottom}>
-        <Text style={{fontSize: 20, fontWeight: 'bold',  textAlign: 'center', color: '#0400ff', flex: 1}}>
+        <Text style={{fontSize: 16, fontWeight: 'bold',  textAlign: 'center', color: '#0400ff', flex: 1}}>
             Today's Fun Fact
         </Text>
-        <Text style={{fontSize: 20, fontWeight: 'bold',  textAlign: 'left', padding: 10, flex: 1}}>
+        <Text style={{fontSize: 10, fontWeight: 'bold',  textAlign: 'left', padding: 10, flex: 1}}>
             Did you know that ........................
         </Text>
-        <Text style={{fontSize: 20, fontWeight: 'bold',  textAlign: 'left', padding: 10, flex: 1}}>
+        <Text style={{fontSize: 10, fontWeight: 'bold',  textAlign: 'left', padding: 10, flex: 1}}>
             To learn more go to [website]
         </Text>
       </View>

@@ -15,7 +15,7 @@ export default function TabMeal() {
   const navigation = useNavigation();
   const win = Dimensions.get('window');
   const ratio = (win.width*0.6)/1280; // actual width of image is 1280
-
+  /*
   var  items  = [
 	{
 		id: 1,
@@ -50,8 +50,9 @@ export default function TabMeal() {
 		name: 'White Rice'
 	},
 ];
-
+*/
   return (
+  { /*
     <View style={styles.container}>
         <View style={mealPlan.top}>
             <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", margin: 0}}>
@@ -81,6 +82,8 @@ export default function TabMeal() {
                 <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "column", flex: 1, justifyContent: 'space-around'}}>
                     <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flex: 1}} />
                         <View style={{backgroundColor: "lightblue", flex: 1}}>
+                        {
+                        /*
                             <SearchableDropDown
 			                    onTextChange={(text) =>  alert(text)}
 			                    onItemSelect={(item) =>  alert(JSON.stringify(item))}
@@ -112,6 +115,7 @@ export default function TabMeal() {
 			                    resetValue={false}
 			                    underlineColorAndroid='transparent' />
                         </View>
+                        }
                         <View style={{backgroundColor: "lightblue", flex: 1}}>
                             
                         </View>
@@ -123,6 +127,8 @@ export default function TabMeal() {
             </View>
         </View>
     </View>
+  */
+    }
   );
 }
 

@@ -35,6 +35,21 @@ export default {
               screens: {
                 TabExerciseScreen: 'Exercise',
               },
+              },
+            TabNutrientInformation: {
+              screens: {
+                TabNutrientInformationScreen: 'NutrientInformation',
+              },
+            },
+            TabNutrientOverview: {
+              screens: {
+                TabNutrientOverviewScreen: 'NutrientOverview',
+              },
+            },
+            TabShop: {
+              screens: {
+                TabShopScreen: 'Shop',
+              },
             },
           },
         },

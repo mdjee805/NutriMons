@@ -56,6 +56,8 @@ export default function TabMeal() {
                         <View style={{backgroundColor: "lightblue", flex: 0.2}}/>
                         <View style={{backgroundColor: "lightblue", flex: 1}}>
                             {/*<Button title="Manually Add Meal" onPress={() => navigation.navigate("AddMeal")} />*/}
+                            {
+                            /*
                             <Menu>
                                 <MenuTrigger text="Manually Add Meal" />
 
@@ -66,6 +68,8 @@ export default function TabMeal() {
                                     </MenuOption>
                                 </MenuOptions>
                             </Menu>
+                            */
+                            }
                         </View>
                         <View style={{backgroundColor: "lightblue", flex: 1}}>
                             <Button title="Create Meal Plan" onPress={() => navigation.navigate("MealPlan")} />

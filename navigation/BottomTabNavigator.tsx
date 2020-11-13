@@ -15,14 +15,24 @@ import TabBarcodeScreen from '../screens/TabScanBarcodeScreen';
 // import TabNutrientScreen from '../screens/TabNutrientScreen';
 import TabExerciseScreen from '../screens/TabExerciseScreen';
 
+import TabNutrientInformationScreen from '../screens/TabNutrientInformationScreen';
+import TabNutrientOverviewScreen from '../screens/TabNutrientOverviewScreen';
+import TabShopScreen from '../screens/TabShopScreen';
 /*import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import TabBryanScreen from '../screens/TabBryanScreen';
 import TabAlissaScreen from '../screens/TabAlissaScreen';
 import TabMichaelScreen from '../screens/TabMichaelScreen';
 import TabMinhScreen from '../screens/TabMinhScreen';*/
-import { BottomTabParamList, TabDashboardParamList, TabProfileParamList, TabTamagotchiParamList, TabMealParamList, TabMealPlanParamList, TabBarcodeParamList, TabWaterParamList, TabExerciseParamList 
+import { BottomTabParamList, TabDashboardParamList, TabProfileParamList, TabTamagotchiParamList, TabMealParamList, TabMealPlanParamList, TabBarcodeParamList, TabWaterParamList, TabExerciseParamList, TabNutrientInformationParamList, TabNutrientOverviewParamList, TabShopParamList
 /*TabOneParamList, TabTwoParamList, TabAlissaParamList, TabBryanParamList, TabMichaelParamList, TabMinhParamList*/ } from '../types';
+
+/*
+=======
+import { BottomTabParamList, TabDashboardParamList, TabProfileParamList, TabTamagotchiParamList, TabNutrientParamList, TabWaterParamList, TabExerciseParamList, TabNutrientInformationParamList, TabNutrientOverviewParamList, TabShopParamList /*TabOneParamList, TabTwoParamList, TabAlissaParamList, TabBryanParamList, TabMichaelParamList, TabMinhParamList } from '../types';
+>>>>>>> 9cc0d4252fe3969ff2befce6f3bc19e5d77fc30f
+*/
+
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -86,6 +96,27 @@ export default function BottomTabNavigator() {
             <BottomTab.Screen
                 name="TabExercise"
                 component={TabExerciseNavigator}
+                options={{
+                    tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+                }}
+            />
+            <BottomTab.Screen
+                name="TabNutrientInformation"
+                component={TabNutrientInformationNavigator}
+                options={{
+                    tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+                }}
+            />
+            <BottomTab.Screen
+                name="TabNutrientOverview"
+                component={TabNutrientOverviewNavigator}
+                options={{
+                    tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+                }}
+            />
+            <BottomTab.Screen
+                name="TabShop"
+                component={TabShopNavigator}
                 options={{
                     tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
                 }}
@@ -252,6 +283,48 @@ function TabExerciseNavigator() {
                 options={{ headerTitle: 'Exercises' }}
             />
         </TabExerciseStack.Navigator>
+    );
+}
+
+const TabNutrientInformationStack = createStackNavigator<TabNutrientInformationParamList>();
+
+function TabNutrientInformationNavigator() {
+    return (
+        <TabNutrientInformationStack.Navigator>
+            <TabNutrientInformationStack.Screen
+                name="TabNutrientInformationScreen"
+                component={TabNutrientInformationScreen}
+                options={{ headerTitle: 'Nutrient Information' }}
+            />
+        </TabNutrientInformationStack.Navigator>
+    );
+}
+
+const TabNutrientOverviewStack = createStackNavigator<TabNutrientOverviewParamList>();
+
+function TabNutrientOverviewNavigator() {
+    return (
+        <TabNutrientOverviewStack.Navigator>
+            <TabNutrientOverviewStack.Screen
+                name="TabNutrientOverviewScreen"
+                component={TabNutrientOverviewScreen}
+                options={{ headerTitle: 'Nutrient Overview' }}
+            />
+        </TabNutrientOverviewStack.Navigator>
+    );
+}
+
+const TabShopStack = createStackNavigator<TabShopParamList>();
+
+function TabShopNavigator() {
+    return (
+        <TabShopStack.Navigator>
+            <TabShopStack.Screen
+                name="TabShopScreen"
+                component={TabShopScreen}
+                options={{ headerTitle: 'Shop' }}
+            />
+        </TabShopStack.Navigator>
     );
 }
 /*const TabOneStack = createStackNavigator<TabOneParamList>();
