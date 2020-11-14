@@ -18,26 +18,13 @@ export default function TabWater() {
     return (
         <View style={styles.container}>
             <View style={dashboard.top}>
-                <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", margin: 0 }}>
-                    <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2 }}>
-                        <SafeAreaView>
-                            <TouchableOpacity onPress={() => { navigation.navigate("Profile") }}>
-                                <Image style={{ width: 40, height: 40, flex: 1 }} source={require('../assets/images/profilePic.png')} />
-                            </TouchableOpacity>
-                        </SafeAreaView>
-                    </View>
-                    <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.6 }}>
+                <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", margin: 0,  }}>
+                    <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 1, flexDirection: "row", alignContent: "center", }}>
                         <Text style={[dashboard.title, { flex: 1 }]}>
                             Water Tracker
                         </Text>
                     </View>
-                    <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2, alignItems: 'flex-end' }}>
-                        <SafeAreaView style={{ flex: 1 }}>
-                            <TouchableOpacity onPress={() => { navigation.navigate("Tamagotchi") }}>
-                                <Image style={{ width: 40, height: 40, flex: 1 }} source={require('../assets/images/tamaPic.png')} />
-                            </TouchableOpacity>
-                        </SafeAreaView>
-                    </View>
+
                 </View>
             </View>
             <View style={dashboard.middle}>
@@ -47,7 +34,7 @@ export default function TabWater() {
                             Insert visual for tracker here
                         </Text>
                     <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", flex: 1, padding: 30, justifyContent: "space-around" }}>
-                        <View style={{ backgroundColor: "lightblue", flex: 0.2 }}>
+                        <View style={{ backgroundColor: "lightblue", flex: 0.4, flexDirection: "column", alignContent: "center",}}>
                             <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Enter the amount of water consumed:             </Text>
                             <TextInput
                                 style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
@@ -55,8 +42,8 @@ export default function TabWater() {
                                 value={amountOfWaterValue}
                             />
                         </View>
-                        <View style={{ backgroundColor: "lightblue", flex: 0.2 }}>
-                            <Button title="Water Settings" onPress={() => navigation.navigate("Exercise")} />
+                        <View style={{ backgroundColor: "lightblue", flex: 0.4, flexDirection: "column", alignContent: "center", paddingTop: 27 }}>
+                            <Button title="Water Settings" />
                         </View>
                     </View>
                 </View>
