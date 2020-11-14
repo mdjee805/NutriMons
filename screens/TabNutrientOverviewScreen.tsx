@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Image, Button, SafeAreaView, TextInput } from 'react-native';
+import { StyleSheet, Image, Button, SafeAreaView, Dimensions, TextInput } from 'react-native';
 import { Text, View } from '../components/Themed';
 
 import styles from "../assets/styles/styles";
@@ -14,6 +14,8 @@ import { useNavigation } from '@react-navigation/native';
 export default function TabNutrientOverview() {
     const navigation = useNavigation();
     const [amountOfWaterValue, amountOfWaterOnChangeText] = React.useState('Amount of water');
+    const win = Dimensions.get('window');
+    const ratio = (win.height * 0.7) / 207; // actual height of image is 207
 
     return (
         <View style={styles.container}>
@@ -41,14 +43,8 @@ export default function TabNutrientOverview() {
                 </View>
             </View>
             <View style={dashboard.middle}>
-                <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "column", flex: 1, padding: 30 }}>
-                    <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 1 }} />
-                    <Text style={[dashboard.title, { flex: 1 }]}>
-                        Insert visual for tracker here
-                        </Text>
-                    <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", flex: 1, padding: 30, justifyContent: "space-around" }}>
-                        
-                    </View>
+                <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2, alignItems: 'center' }}>
+                    <Image style={{ width: 350 * ratio, height: win.height * 0.7 }} source={require('../assets/images/nutGraph.jpg')} />
                 </View>
             </View>
         </View>
@@ -84,7 +80,8 @@ const dashboard = StyleSheet.create({
         borderTopRightRadius: 20,
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
-        justifyContent: 'space-evenly',
+        justifyContent: 'space-around',
+        alignContent: "center",
         backgroundColor: "lightblue"
     },
 });
