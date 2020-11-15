@@ -14,7 +14,7 @@ export default function TabMeal() {
   const [ data, setData ] = React.useState('Not Found');
   const navigation = useNavigation();
   const win = Dimensions.get('window');
-  const ratio = (win.width*0.6)/1280; // actual width of image is 1280
+  const ratio = (win.height*0.3)/704; // actual height of image is 704
 
   return (
     <View style={styles.container}>
@@ -48,28 +48,14 @@ export default function TabMeal() {
                         <View style={{backgroundColor: "lightblue", flex: 1, marginBottom: 20}}>
                             <Button title="Scan Barcode" onPress={() => navigation.navigate("Barcode")} />
                             <SafeAreaView style = {{marginTop: 20, justifyContent: "center", alignItems: "center"}}>
-                                <TouchableOpacity onPress={() => { navigation.navigate("Barcode") } }>
-                                    <Image style={{width: win.width*0.6, height: 704 * ratio, flex: 1 }} source={require('../assets/images/barcode.png')} />
+                                <TouchableOpacity onPress={() => navigation.navigate("Barcode") }>
+                                    <Image style={{width: (1280*0.5)*ratio, height: win.height*0.3, flex: 1 }} source={require('../assets/images/barcode.png')} />
                                 </TouchableOpacity>
                             </SafeAreaView>
                         </View>
                         <View style={{backgroundColor: "lightblue", flex: 0.2}}/>
                         <View style={{backgroundColor: "lightblue", flex: 1}}>
-                            {/*<Button title="Manually Add Meal" onPress={() => navigation.navigate("AddMeal")} />*/}
-                            {
-                            /*
-                            <Menu>
-                                <MenuTrigger text="Manually Add Meal" />
-
-                                <MenuOptions>
-                                    <MenuOption onSelect={() => navigation.navigate("AddMeal") text="Save" />
-                                    <MenuOption onSelect={() => alert(`Delete`)}>
-                                    <Text style={{ color: 'red' }}>Delete</Text>
-                                    </MenuOption>
-                                </MenuOptions>
-                            </Menu>
-                            */
-                            }
+                            <Button title="Manually Add Meal" onPress={() => navigation.navigate("AddMeal")} />
                         </View>
                         <View style={{backgroundColor: "lightblue", flex: 1}}>
                             <Button title="Create Meal Plan" onPress={() => navigation.navigate("MealPlan")} />

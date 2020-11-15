@@ -19,11 +19,11 @@ export default function TabDashboard() {
       <View style={dashboard.top}>
           <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", margin: 0}}>
               <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2 }}>
-                  {/*<SafeAreaView>
+                  <SafeAreaView>
                       <TouchableOpacity onPress={() => { navigation.navigate("Profile") } }>
                           <Image style={{width: 40, height: 40, flex: 1}} source={require('../assets/images/profilePic.png')} />
                       </TouchableOpacity>
-                  </SafeAreaView>*/}
+                  </SafeAreaView>
               </View>
               <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.6 }}>
                 <Text style={[dashboard.title, { flex: 1 }]}>
@@ -31,15 +31,15 @@ export default function TabDashboard() {
                 </Text>
               </View>
               <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2, alignItems: 'flex-end'}}>
-                  {/*<SafeAreaView style={{ flex: 1 }}>
+                  <SafeAreaView style={{ flex: 1 }}>
                       <TouchableOpacity onPress={() => { navigation.navigate("Tamagotchi") } }>
                          <Image style={{ width: 40, height: 40, flex: 1 }} source={require('../assets/images/tamaPic.png')} />
                       </TouchableOpacity>
-                  </SafeAreaView>*/}
+                  </SafeAreaView>
               </View>
           </View>
       </View>
-        <View style={dashboard.middle}>
+      <View style={dashboard.middle}>
           <View style={{ backgroundColor: "lightblue", flex: 0.3, borderTopLeftRadius: 20, borderTopRightRadius: 20, borderBottomLeftRadius: 20, borderBottomRightRadius: 20}}>
               <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "column", flex: 1, justifyContent: 'space-around'}}>
                   <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flex: 1}} />
@@ -77,7 +77,7 @@ export default function TabDashboard() {
                   Calories Consumed: 1600
               </Text>
           </View>
-        </View>
+      </View>
       <View style={dashboard.bottom}>
         <Text style={{fontSize: 16, fontWeight: 'bold',  textAlign: 'center', color: '#0400ff', flex: 1}}>
             Today's Fun Fact

@@ -38,20 +38,15 @@ export default function TabScanBarcode() {
             </View>
         </View>
         <View style={meal.bottom}>
-            <View style={{ backgroundColor: "lightblue", flex: 1, borderTopLeftRadius: 20, borderTopRightRadius: 20, borderBottomLeftRadius: 20, borderBottomRightRadius: 20}}>
-                <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "column", flex: 1, justifyContent: 'space-around'}}>
-                    <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flex: 1}} />
-                        <View style={{backgroundColor: "lightblue", flex: 1}}>
-                            <Button title="Scan Barcode" onPress={() => navigation.navigate("ScanBarcode")} />
-                            <BarcodeScannerComponent
-                                onUpdate={(err, result) => {
-                                    if (result) setData(result.text)
-                                    else setData('Not Found')
-                                }}
-                            />
-                            <p>{data}</p>
-                        </View>
-                </View>
+            <View style={{ backgroundColor: "lightblue", flex: 1, borderTopLeftRadius: 20, borderTopRightRadius: 20, borderBottomLeftRadius: 20, borderBottomRightRadius: 20, justifyContent: 'center', alignItems: 'center'}}>
+                <BarcodeScannerComponent
+                    style={{borderWidth: 2, borderTopLeftRadius: 20, borderTopRightRadius: 20, borderBottomLeftRadius: 20, borderBottomRightRadius: 20}}
+                    onUpdate={(err, result) => {
+                        if (result) setData(result.text)
+                        else setData('Not Found')
+                    }}
+                />
+                <p>{data}</p>
             </View>
         </View>
     </View>

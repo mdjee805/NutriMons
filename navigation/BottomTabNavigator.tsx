@@ -10,6 +10,7 @@ import TabProfileScreen from '../screens/TabProfileScreen';
 import TabTamagotchiScreen from '../screens/TabTamagotchiScreen';
 import TabWaterScreen from '../screens/TabWaterScreen';
 import TabMealScreen from '../screens/TabMealScreen';
+import TabAddMealScreen from '../screens/TabAddMealScreen';
 import TabMealPlanScreen from '../screens/TabMealPlanScreen';
 import TabBarcodeScreen from '../screens/TabScanBarcodeScreen';
 // import TabNutrientScreen from '../screens/TabNutrientScreen';
@@ -24,7 +25,7 @@ import TabBryanScreen from '../screens/TabBryanScreen';
 import TabAlissaScreen from '../screens/TabAlissaScreen';
 import TabMichaelScreen from '../screens/TabMichaelScreen';
 import TabMinhScreen from '../screens/TabMinhScreen';*/
-import { BottomTabParamList, TabDashboardParamList, TabProfileParamList, TabTamagotchiParamList, TabMealParamList, TabMealPlanParamList, TabBarcodeParamList, TabWaterParamList, TabExerciseParamList, TabNutrientInformationParamList, TabNutrientOverviewParamList, TabShopParamList
+import { BottomTabParamList, TabDashboardParamList, TabProfileParamList, TabTamagotchiParamList, TabMealParamList, TabAddMealParamList, TabMealPlanParamList, TabBarcodeParamList, TabWaterParamList, TabExerciseParamList, TabNutrientInformationParamList, TabNutrientOverviewParamList, TabShopParamList
 /*TabOneParamList, TabTwoParamList, TabAlissaParamList, TabBryanParamList, TabMichaelParamList, TabMinhParamList*/ } from '../types';
 
 /*
@@ -68,6 +69,13 @@ export default function BottomTabNavigator() {
             <BottomTab.Screen
                 name="TabMeal"
                 component={TabMealNavigator}
+                options={{
+                    tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+                }}
+            />
+            <BottomTab.Screen
+                name="TabAddMeal"
+                component={TabAddMealNavigator}
                 options={{
                     tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
                 }}
@@ -228,6 +236,20 @@ function TabMealNavigator() {
                 options={{ headerTitle: 'Meal' }}
             />
         </TabMealStack.Navigator>
+    );
+}
+
+const TabAddMealStack = createStackNavigator<TabAddMealParamList>();
+
+function TabAddMealNavigator() {
+    return (
+        <TabAddMealStack.Navigator>
+            <TabAddMealStack.Screen
+                name="TabAddMealScreen"
+                component={TabAddMealScreen}
+                options={{ headerTitle: 'Add New Meal' }}
+            />
+        </TabAddMealStack.Navigator>
     );
 }
 
