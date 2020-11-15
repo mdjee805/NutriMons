@@ -16,6 +16,16 @@ export default {
               TabProfileScreen: 'TabProfileScreen',
             },
            },
+           TabLogin: {
+            screens: {
+              TabLoginScreen: 'TabLoginScreen',
+            },
+           },
+           TabRegister: {
+            screens: {
+              TabRegisterScreen: 'TabRegisterScreen',
+            },
+           },
            TabTamagotchi: {
              screens: {
                TabTamagotchiScreen: 'Tamagotchi',
