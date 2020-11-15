@@ -10,7 +10,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import SelectSearch from 'react-select-search'; // npm install react-select-search --save (https://reactjsexample.com/react-powered-select-box-with-filter/)
 
-import '../assets/styles/style.css';
+import cssStyles from '../assets/styles/style.css';
 
 const options = [
     {name: 'Aerobic'},
