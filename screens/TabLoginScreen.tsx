@@ -14,6 +14,8 @@ import { useNavigation } from '@react-navigation/native';
 const Login = () => {
   const [usernameValue, usernameOnChangeText] = React.useState('Enter username');
   const [passwordValue, passwordOnChangeText] = React.useState('*******');
+  const [ data, setData ] = React.useState('Not Found');
+  const navigation = useNavigation();
   const win = Dimensions.get('window');
 
   return (
@@ -53,6 +55,8 @@ const Login = () => {
                     </View>
                     <View style={{flex: 0.15, width: win.width*0.8, alignItems: 'center',}}/>
                     <View style={{flex: 0.03, width: win.width*0.3, justifyContent: 'center'}}>
+                        <Button title="Create Your Account" onPress={() => navigation.navigate("Register")} />
+                        {/*
                         <TouchableOpacity
                             style = {textInputStyles.submitButton}
                             onPress = {
@@ -60,6 +64,7 @@ const Login = () => {
                             }>
                             <Text style = {textInputStyles.submitButtonText}> Create Your Account </Text>
                         </TouchableOpacity>
+                        */}
                     </View>
                 </View>
             </View>

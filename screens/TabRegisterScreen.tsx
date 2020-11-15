@@ -14,6 +14,8 @@ import { useNavigation } from '@react-navigation/native';
 const Register = () => {
   const [usernameValue, usernameOnChangeText] = React.useState('Enter a valid email address');
   const [passwordValue, passwordOnChangeText] = React.useState('*******');
+  const [ data, setData ] = React.useState('Not Found');
+  const navigation = useNavigation();
   const win = Dimensions.get('window');
   const [isSelected, setSelection] = useState(false);
 
