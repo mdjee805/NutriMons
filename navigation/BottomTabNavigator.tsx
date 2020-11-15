@@ -7,6 +7,8 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import TabDashboardScreen from '../screens/TabDashboardScreen';
 import TabProfileScreen from '../screens/TabProfileScreen';
+import TabLoginScreen from '../screens/TabLoginScreen';
+import TabRegisterScreen from '../screens/TabRegisterScreen';
 import TabTamagotchiScreen from '../screens/TabTamagotchiScreen';
 import TabWaterScreen from '../screens/TabWaterScreen';
 import TabMealScreen from '../screens/TabMealScreen';
@@ -25,7 +27,7 @@ import TabBryanScreen from '../screens/TabBryanScreen';
 import TabAlissaScreen from '../screens/TabAlissaScreen';
 import TabMichaelScreen from '../screens/TabMichaelScreen';
 import TabMinhScreen from '../screens/TabMinhScreen';*/
-import { BottomTabParamList, TabDashboardParamList, TabProfileParamList, TabTamagotchiParamList, TabMealParamList, TabAddMealParamList, TabMealPlanParamList, TabBarcodeParamList, TabWaterParamList, TabExerciseParamList, TabNutrientInformationParamList, TabNutrientOverviewParamList, TabShopParamList
+import { BottomTabParamList, TabDashboardParamList, TabProfileParamList, TabLoginParamList, TabRegisterParamList, TabTamagotchiParamList, TabMealParamList, TabAddMealParamList, TabMealPlanParamList, TabBarcodeParamList, TabWaterParamList, TabExerciseParamList, TabNutrientInformationParamList, TabNutrientOverviewParamList, TabShopParamList
 /*TabOneParamList, TabTwoParamList, TabAlissaParamList, TabBryanParamList, TabMichaelParamList, TabMinhParamList*/ } from '../types';
 
 /*
@@ -53,8 +55,21 @@ export default function BottomTabNavigator() {
             />
             <BottomTab.Screen
                 name="TabProfile"
-                name="TabProfile"
                 component={TabProfileNavigator}
+                options={{
+                    tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+                }}
+            />
+            <BottomTab.Screen
+                name="TabLogin"
+                component={TabLoginNavigator}
+                options={{
+                    tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+                }}
+            />
+            <BottomTab.Screen
+                name="TabRegister"
+                component={TabRegisterNavigator}
                 options={{
                     tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
                 }}
@@ -208,6 +223,33 @@ function TabProfileNavigator() {
                 options={{ headerTitle: 'Profile' }}
             />
         </TabProfileStack.Navigator>
+    );
+}
+
+const TabLoginStack = createStackNavigator<TabLoginParamList>();
+
+function TabLoginNavigator() {
+    return (
+        <TabLoginStack.Navigator>
+            <TabLoginStack.Screen
+                name="TabLoginScreen"
+                component={TabLoginScreen}
+                options={{ headerTitle: 'Login' }}
+            />
+        </TabLoginStack.Navigator>
+    );
+}
+const TabRegisterStack = createStackNavigator<TabRegisterParamList>();
+
+function TabRegisterNavigator() {
+    return (
+        <TabRegisterStack.Navigator>
+            <TabRegisterStack.Screen
+                name="TabRegisterScreen"
+                component={TabRegisterScreen}
+                options={{ headerTitle: 'Registration' }}
+            />
+        </TabRegisterStack.Navigator>
     );
 }
 

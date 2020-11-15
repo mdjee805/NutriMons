@@ -9,6 +9,8 @@ import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 
 import ProfileScreen from '../screens/TabProfileScreen';
+import LoginScreen from '../screens/TabLoginScreen';
+import RegisterScreen from '../screens/TabRegisterScreen';
 import TamagotchiScreen from '../screens/TabTamagotchiScreen';
 import WaterScreen from '../screens/TabWaterScreen';
 import MealScreen from '../screens/TabMealScreen';
@@ -41,6 +43,8 @@ function RootNavigator() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Root" component={BottomTabNavigator} />
       <Stack.Screen name="Profile" component={ProfileScreen} />
+      <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="Register" component={RegisterScreen} />
       <Stack.Screen name="Tamagotchi" component={TamagotchiScreen} />
       <Stack.Screen name="Water" component={WaterScreen} />
       <Stack.Screen name="Meal" component={MealScreen} />

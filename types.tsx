@@ -6,6 +6,8 @@ export type RootStackParamList = {
 export type BottomTabParamList = {
     TabDashboard: undefined;
     TabProfile: undefined;
+    TabLogin: undefined;
+    TabRegister: undefined;
     TabTamagotchi: undefined;
     TabWater: undefined;
     TabMeal: undefined;
@@ -30,6 +32,14 @@ export type TabDashboardParamList = {
 
 export type TabProfileParamList = {
     TabProfileScreen: undefined;
+};
+
+export type TabLoginParamList = {
+    TabLoginScreen: undefined;
+};
+
+export type TabRegisterParamList = {
+    TabRegisterScreen: undefined;
 };
 
 export type TabTamagotchiParamList = {
