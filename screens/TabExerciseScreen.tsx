@@ -13,17 +13,17 @@ import SelectSearch from 'react-select-search'; // npm install react-select-sear
 import cssStyles from '../assets/styles/styles';
 
 const options = [
-    {name: 'Aerobic'},
-    {name: 'Basketball'},
-    {name: 'Badminton'},
-    {name: 'Baseball'},
-    {name: 'Bench Press'},
-    {name: 'Bicycling'},
-    {name: 'Boxing'},
-    {name: 'Soccer'},
-    {name: 'Running'},
-    {name: 'Volleyball'},
-    {name: 'Walking'},
+    {name: 'Aerobic', value: 'Aerobic'},
+    {name: 'Basketball', value: 'Basketball'},
+    {name: 'Badminton', value: 'Badminton'},
+    {name: 'Baseball', value: 'Baseball'},
+    {name: 'Bench Press', value: 'Bench Press'},
+    {name: 'Bicycling', value: 'Bicycling'},
+    {name: 'Boxing', value: 'Boxing'},
+    {name: 'Soccer', value: 'Soccer' },
+    {name: 'Running', value: 'Running'},
+    {name: 'Volleyball', value: 'Volleyball'},
+    {name: 'Walking', value: 'Walking'},
 ];
 
 const Exercise = () => {
@@ -48,9 +48,7 @@ const Exercise = () => {
                     </SafeAreaView>
                 </View>
                 <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.6 }}>
-                <Text style={exercise.title}>
-                    Exercise
-                </Text>
+                <Text style={styles.title}> Exercise </Text>
                 </View>
                 <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2, alignItems: 'flex-end'}}>
                     <SafeAreaView style={{ flex: 1 }}>
