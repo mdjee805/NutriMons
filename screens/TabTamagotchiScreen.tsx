@@ -34,37 +34,37 @@ export default function TabMichael() {
             <View style={[tamagotchi.bottom, ]}>
 
                 <TouchableOpacity
-                    style={tamagotchi.buttoms}
-                    activeOpacity={.5}
-                    onPress={() => navigation.navigate("Nutrient")}>
+                    style={tamagotchi.button}
+                    activeOpacity={1}
+                    onPress={() => console.log("Feed")}>
                         <Text style={{ textAlign: 'center', fontSize: 20 }}>Feed</Text>  
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    style={tamagotchi.buttoms}
-                    activeOpacity={.5}
-                    onPress={() => navigation.navigate("Nutrient")}>
+                    style={tamagotchi.button}
+                    activeOpacity={1}
+                    onPress={() => console.log("Water")}>
                     <Text style={{ textAlign: 'center', fontSize: 20 }}>Water</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    style={tamagotchi.buttoms}
-                    activeOpacity={.5}
-                    onPress={() => navigation.navigate("Nutrient")}>
+                    style={tamagotchi.button}
+                    activeOpacity={1}
+                    onPress={() => console.log("Touch")}>
                     <Text style={{ textAlign: 'center', fontSize: 20 }}>Touch</Text>
                 </TouchableOpacity>
                 
                 <TouchableOpacity
-                    style={tamagotchi.buttoms}
-                    activeOpacity={.5}
-                    onPress={() => navigation.navigate("Nutrient")}>
+                    style={tamagotchi.button}
+                    activeOpacity={1}
+                    onPress={() => console.log("Hat")}>
                     <Text style={{ textAlign: 'center', fontSize: 20 }}>Hat</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    style={tamagotchi.buttoms}
-                    activeOpacity={.5}
-                    onPress={() => navigation.navigate("Nutrient")}>
+                    style={tamagotchi.button}
+                    activeOpacity={1}
+                    onPress={() => console.log("Pet")}>
                     <Text style={{ textAlign: 'center', fontSize: 20 }}>Pet</Text>
                 </TouchableOpacity>
 
@@ -123,20 +123,22 @@ const tamagotchi = StyleSheet.create({
         margin: 20,
         marginTop: 10,
         marginBottom: 0,
-        borderWidth: 2,
+        
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
         justifyContent: 'space-evenly',
-        backgroundColor: "lightblue"
+        backgroundColor: "lightgreen"
     },
     bottom: {
         margin: 5,
         marginTop: 20,
         marginBottom: 0,
+
         flex: 0.15,
         flexDirection: 'row',
+
         justifyContent: 'space-evenly',
         backgroundColor: "lightblue",
         borderWidth: 2,
@@ -145,92 +147,17 @@ const tamagotchi = StyleSheet.create({
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20,
     },
-    buttoms: {
-        marginTop: 20,
-        marginBottom: 10,
-
-        paddingTop: 10,
-        paddingBottom: 10,
-        paddingLeft: 7,
-        paddingRight: 7,
-        backgroundColor: 'red',
-        borderRadius: 50,
-        borderWidth: 1,
-        borderColor: 'purple'
+    
+    button: {
+        backgroundColor: "red",
+        padding: 10,
+        borderRadius: 10,
+        marginTop: 25,
+        
     },
-    feedButtom: {
-        marginTop: 20,
-        marginBottom: 10,
-        
-        paddingTop: 10,
-        paddingBottom: 10,
-        paddingLeft: 7,
-        paddingRight: 7,
-        backgroundColor: 'red',
-        borderRadius: 50,
-        borderWidth: 1,
-        borderColor: 'purple'
-    },
-    waterButtom: {
-        
-        marginTop: 20,
-        marginBottom: 20,
-        
-        
-        paddingTop: 10,
-        paddingBottom: 10,
-        paddingLeft: 7,
-        paddingRight: 7,
-        backgroundColor: 'red',
-        borderRadius: 50,
-        borderWidth: 1,
-        borderColor: 'purple'
-    },
-    pettingButtom: {
-
-        marginTop: 20,
-        marginBottom: 20,
-        
-
-        paddingTop: 10,
-        paddingBottom: 10,
-        paddingLeft: 7,
-        paddingRight: 7,
-        backgroundColor: 'red',
-        borderRadius: 50,
-        borderWidth: 1,
-        borderColor: 'purple'
-    },
-    hatButtom: {
-
-        marginTop: 20,
-        marginBottom: 20,
-        
-
-        paddingTop: 10,
-        paddingBottom: 10,
-        paddingLeft: 7,
-        paddingRight: 7,
-        backgroundColor: 'red',
-        borderRadius: 50,
-        borderWidth: 1,
-        borderColor: 'purple'
-    },
-    petsButtom: {
-
-        marginTop: 20,
-        marginBottom: 20,
-        
-
-        paddingTop: 10,
-        paddingBottom: 10,
-        paddingLeft: 10,
-        paddingRight: 10,
-        backgroundColor: 'red',
-        borderRadius: 50,
-        borderWidth: 1,
-        borderColor: 'purple'
-    },
+    buttonText: {
+        color: "white"
+    }
 
 
 
