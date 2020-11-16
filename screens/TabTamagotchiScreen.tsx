@@ -35,7 +35,7 @@ export default function TabMichael() {
                 }
                 <View style={[tamagotchi.middleVectical, { flex: .6 }]}>
                     <Text style={[tamagotchi.petName, { backgroundColor: 'red' }]}>Minh</Text>
-                    <Text style={[tamagotchi.petLevel, { backgroundColor: 'blue' }]}>Level 1000</Text>
+                    <Text style={[tamagotchi.petLevel, { backgroundColor: 'blue', }]}>Level 1000 </Text>
                     <Text style={[tamagotchi.petMood, { backgroundColor: 'purple' }]}>Sad</Text>
                 </View>
 
@@ -174,7 +174,6 @@ const tamagotchi = StyleSheet.create({
     petName: {
         textAlign: 'center',
         fontSize: 15,
-        fontWeight: 'bold',
         color: 'black',
         
         
@@ -182,13 +181,13 @@ const tamagotchi = StyleSheet.create({
     petLevel: {
         textAlign: 'center',
         fontSize: 10,
-        fontWeight: 'bold',
         color: 'black',
+        
+        
     },
     petMood: {
         textAlign: 'center',
         fontSize: 10,
-        fontWeight: 'bold',
         color: 'black',
     },
     middle: {
@@ -227,7 +226,8 @@ const tamagotchi = StyleSheet.create({
         padding: 10,
         borderRadius: 10,
         marginTop: 25,
-        
+        width: 75,
+        height: 50,
     },
     buttonText: {
         color: "white"
