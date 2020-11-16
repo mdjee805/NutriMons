@@ -34,9 +34,9 @@ export default function TabMichael() {
                 {//Text in the middle 
                 }
                 <View style={[tamagotchi.middleVectical, { flex: .6 }]}>
-                    <Text style={[tamagotchi.petName]}>Minh</Text>
-                    <Text style={[tamagotchi.petLevel]}>Level 1000</Text>
-                    <Text style={[tamagotchi.petMood]}>Sad</Text>
+                    <Text style={[tamagotchi.petName, { backgroundColor: 'red' }]}>Minh</Text>
+                    <Text style={[tamagotchi.petLevel, { backgroundColor: 'blue' }]}>Level 1000</Text>
+                    <Text style={[tamagotchi.petMood, { backgroundColor: 'purple' }]}>Sad</Text>
                 </View>
 
                 <View style={{ flex: .2, backgroundColor: 'green' }}>
