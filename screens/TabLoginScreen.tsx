@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Image, Button, SafeAreaView, Component, Dimensions, View, Text, TextInput } from 'react-native';
+import { StyleSheet, Image, Button, SafeAreaView, Component, Dimensions, View, Text, TextInput,  } from 'react-native';
 //import { Text, View } from '../components/Themed';
 import { FieldError } from 'react-hook-form';
 import styles from "../assets/styles/styles";
@@ -25,21 +25,31 @@ const Login = () => {
                         <Text style={{fontSize: 20, fontWeight: 'bold', color: 'black', textAlign: 'center'}}>Login</Text>
                     </View>
                     <View style={{flex: 0.01, width: win.width*0.8, alignItems: 'center',}}/>
-                    <View style={{flex: 0.15, width: win.width*0.8}}>
-                        <Text style={{fontSize: 20, fontWeight: 'bold'}}>Username:                              </Text>
-                        <TextInput
+                    <View style={{ flex: 0.15, width: win.width * 0.8 }}>
+                    
+                        <Text style={{ fontSize: 20, fontWeight: 'bold', } }>Username:                              </Text>
+                        
+
+                        <Image style={{ width: 30, height: 30 }} source={require('../assets/images/userIcon.png')} />
+                        {/*<TextInput
                             style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
                             onChangeText={text => usernameOnChangeText(text)}
                             value={usernameValue}
-                        />
+                        />*/}
+                  <TextInput style={textInputStyles.loginBox} placeholder="Username" ></TextInput>
                     </View>
                     <View style={{flex: 0.15, width: win.width*0.8}}>
                         <Text style={{fontSize: 20, fontWeight: 'bold'}}>Password:             </Text>
-                        <TextInput
+                        
+                        <Image style={{ width: 30, height: 30 }} source={require('../assets/images/lock.png')} />
+
+                  {/* <TextInput
                             style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
                             onChangeText={text => passwordOnChangeText(text)}
                             value={passwordValue}
-                        />
+                        />*/}
+                  <TextInput style={textInputStyles.loginBox} placeholder="Password" underlineColorAndroid="transparent"></TextInput>
+
                     </View>
                     <View style={{flex: 0.15, width: win.width*0.8}}>
                         <TouchableOpacity
@@ -116,5 +126,11 @@ const textInputStyles = StyleSheet.create({
    submitButtonText:{
       color: 'white',
       textAlign: 'center'
-   }
+    },
+    loginBox: {
+        height: 40,
+        borderColor: "black",
+        borderWidth: 2,
+        
+    },
 });
