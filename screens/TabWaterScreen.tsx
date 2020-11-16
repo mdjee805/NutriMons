@@ -15,7 +15,7 @@ export default function TabWater() {
     const navigation = useNavigation();
     const [amountOfWaterValue, amountOfWaterOnChangeText] = React.useState('Amount of water');
     const win = Dimensions.get('window');
-    const ratio = (win.height * 0.5) / 302; // actual height of image is 302
+    const ratio = (win.height * 0.35) / 302; // actual height of image is 302
     return (
         <View style={styles.container}>
             <View style={dashboard.top}>
@@ -29,22 +29,22 @@ export default function TabWater() {
                 </View>
             </View>
             <View style={dashboard.middle}>
-                <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", flex: 1, justifyContent: "center" }}>
-                        <Image style={{ width: 407 * ratio, height: win.height * 0.5 }} source={require('../assets/images/water.jpg')} />
+                <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", flex: 1, justifyContent: "center", paddingTop: 20 }}>
+                        <Image style={{ width: 407 * ratio, height: win.height * 0.35 }} source={require('../assets/images/water.jpg')} />
                 </View>
             </View>
             <View style={dashboard.bottom}>
                 <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", flex: .3, alignItems: "center", paddingTop: 40 }}>
-                        <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", flex: 1, padding: 30, justifyContent: "space-around" }}>
-                            <View style={{ backgroundColor: "lightblue", flex: 0.5, flexDirection: "column", alignContent: "center", }}>
-                                <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Enter the amount of water consumed:             </Text>
+                    <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", flex: 1, padding: 30, justifyContent: "space-around" }}>
+                        <View style={{ backgroundColor: "lightblue", flex: 0.5, flexDirection: "column", alignContent: "center", paddingBottom: 10, justifyContent: "center" }}>
+                                <Text style={{ fontSize: 15, fontWeight: 'bold' }}>Enter the amount of water consumed:             </Text>
                                 <TextInput
                                     style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
                                     onChangeText={text => amountOfWaterOnChangeText(text)}
                                     value={amountOfWaterValue} />
-                            </View>
-                            <View style={{ backgroundColor: "lightblue", flex: 0.5, flexDirection: "column", alignContent: "center", paddingTop: 27 }}>
-                                <Button title="Water Settings" />
+                        </View>
+                        <View style={{ backgroundColor: "lightblue", flex: 0.5, flexDirection: "column", alignContent: "space-around" }}>
+                                <Button title="Log water" color="#841584" onPress={() => navigation.navigate("Water")}/>
                             </View>
                         </View>
                     </View>
@@ -76,7 +76,7 @@ const dashboard = StyleSheet.create({
         borderBottomRightRadius: 20
     },
     middle: {
-        flex: 0.7,
+        flex: 0.6,
         flexDirection: "row",
         margin: 30,
         borderWidth: 2,
@@ -90,7 +90,7 @@ const dashboard = StyleSheet.create({
     bottom: {
         margin: 10,
         marginTop: 0,
-        flex: 0.2,
+        flex: 0.3,
         backgroundColor: "lightblue",
         borderWidth: 2,
         borderTopLeftRadius: 20,
