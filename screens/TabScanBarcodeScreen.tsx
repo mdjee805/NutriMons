@@ -25,9 +25,7 @@ export default function TabScanBarcode() {
                     </SafeAreaView>
                 </View>
                 <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.6 }}>
-                <Text style={meal.title}>
-                    Scan Barcode
-                </Text>
+                <Text style={styles.title}> Scan Barcode </Text>
                 </View>
                 <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2, alignItems: 'flex-end'}}>
                     <SafeAreaView style={{ flex: 1 }}>
