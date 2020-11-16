@@ -30,7 +30,7 @@ export default function ProfileScreen() {
 
                 {//Personal
                 }
-                <View style={[styles.roundedContainer, { backgroundColor: 'white', flex: .3, margin: 10, alignItems: 'flex-start', justifyContent: 'flex-start', padding: 5 }]}>
+                <View style={[styles.roundedContainer, { backgroundColor: '', flex: .3, margin: 10, alignItems: 'flex-start', justifyContent: 'flex-start', padding: 5 }]}>
                     <View style={[styles.rowContainer, { backgroundColor: '' }]}>
                         <Text style={{ fontWeight: 'bold' }}>
                             Personal
@@ -61,7 +61,7 @@ export default function ProfileScreen() {
 
                 {//Financial
                 }
-                <View style={[styles.roundedContainer, { backgroundColor: 'white', flex: .4, margin: 10, alignItems: 'flex-start', justifyContent: 'flex-start', padding: 5 }]}>
+                <View style={[styles.roundedContainer, { backgroundColor: '', flex: .4, margin: 10, alignItems: 'flex-start', justifyContent: 'flex-start', padding: 5 }]}>
                     <View style={[styles.rowContainer, { backgroundColor: '' }]}>
                         <Text style={{ fontWeight: 'bold' }}>
                             Financial
@@ -96,7 +96,7 @@ export default function ProfileScreen() {
 
                 {//Health Factors
                 }
-                <View style={[styles.roundedContainer, { backgroundColor: 'white', flex: .4, margin: 10, alignItems: 'flex-start', justifyContent: 'flex-start', padding: 5 }]}>
+                <View style={[styles.roundedContainer, { backgroundColor: '', flex: .4, margin: 10, alignItems: 'flex-start', justifyContent: 'flex-start', padding: 5 }]}>
                     <View style={[styles.rowContainer, { backgroundColor: '' }]}>
                         <Text style={{ fontWeight: 'bold' }}>
                             Age: 68
@@ -143,7 +143,7 @@ export default function ProfileScreen() {
 
                 {//Health Goals
                 }
-                <View style={[styles.roundedContainer, { backgroundColor: 'white', flex: .6, margin: 10, alignItems: 'flex-start', justifyContent: 'flex-start', padding: 5 }]}>
+                <View style={[styles.roundedContainer, { backgroundColor: '', flex: .6, margin: 10, alignItems: 'flex-start', justifyContent: 'flex-start', padding: 5 }]}>
                     <View style={[styles.rowContainer, { backgroundColor: '' }]}>
                         <Text style={{ fontWeight: 'bold' }}>
                             Health Goals

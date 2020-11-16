@@ -16,11 +16,46 @@ export default function TabMichael() {
             <View style={tamagotchi.top}>
                 <Text style={tamagotchi.title}>NutriMons</Text>
             </View>
+            {//Top2
+            }
+            <View style={tamagotchi.top2}>
 
-            <Text style={[tamagotchi.petName]}>Bobby</Text>
-            <Text style={[tamagotchi.petLevel]}>Level 1000</Text>
-            <Text style={[tamagotchi.petMood]}>Sad</Text>
+                <View style={{ flex: .2, backgroundColor: 'green' }}>
+                {//Left button
+                }
+                <TouchableOpacity
+                    style={{backgroundColor: "pink", padding: 10, borderRadius: 10, marginTop: 25, }}
+                    activeOpacity={.5}
+                    onPress={() => console.log("mom")}>
+                    <Text style={{ textAlign: 'center', fontSize: 20 }}>Store</Text>
+                </TouchableOpacity> 
+                </View>
 
+                {//Text in the middle 
+                }
+                <View style={[tamagotchi.middleVectical, { flex: .6 }]}>
+                    <Text style={[tamagotchi.petName, { backgroundColor: 'red' }]}>Minh</Text>
+                    <Text style={[tamagotchi.petLevel, { backgroundColor: 'blue' }]}>Level 1000</Text>
+                    <Text style={[tamagotchi.petMood, { backgroundColor: 'purple' }]}>Sad</Text>
+                </View>
+
+                <View style={{ flex: .2, backgroundColor: 'green' }}>
+                {//Right button
+                }
+                <TouchableOpacity
+                    style={{ backgroundColor: "pink", padding: 10, borderRadius: 10, marginTop: 25, }}
+                    activeOpacity={.5}
+                    onPress={() => console.log("mom2")}>
+                    <Text style={{ textAlign: 'center', fontSize: 20 }}>X</Text>
+                </TouchableOpacity>
+                </View>
+                
+            </View>
+            {/*
+                <Text style={[tamagotchi.petName]}>Bobby</Text>
+                <Text style={[tamagotchi.petLevel]}>Level 1000</Text>
+                <Text style={[tamagotchi.petMood]}>Sad</Text>
+            */}
             {//Middle
             }
             <View style={tamagotchi.middle}>
@@ -35,35 +70,35 @@ export default function TabMichael() {
 
                 <TouchableOpacity
                     style={tamagotchi.button}
-                    activeOpacity={1}
+                    activeOpacity={.5}
                     onPress={() => console.log("Feed")}>
                         <Text style={{ textAlign: 'center', fontSize: 20 }}>Feed</Text>  
                 </TouchableOpacity>
 
                 <TouchableOpacity
                     style={tamagotchi.button}
-                    activeOpacity={1}
+                    activeOpacity={.5}
                     onPress={() => console.log("Water")}>
                     <Text style={{ textAlign: 'center', fontSize: 20 }}>Water</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
                     style={tamagotchi.button}
-                    activeOpacity={1}
+                    activeOpacity={.5}
                     onPress={() => console.log("Touch")}>
                     <Text style={{ textAlign: 'center', fontSize: 20 }}>Touch</Text>
                 </TouchableOpacity>
                 
                 <TouchableOpacity
                     style={tamagotchi.button}
-                    activeOpacity={1}
+                    activeOpacity={.5}
                     onPress={() => console.log("Hat")}>
                     <Text style={{ textAlign: 'center', fontSize: 20 }}>Hat</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
                     style={tamagotchi.button}
-                    activeOpacity={1}
+                    activeOpacity={.5}
                     onPress={() => console.log("Pet")}>
                     <Text style={{ textAlign: 'center', fontSize: 20 }}>Pet</Text>
                 </TouchableOpacity>
@@ -98,22 +133,61 @@ const tamagotchi = StyleSheet.create({
         borderBottomLeftRadius: 20,
         borderBottomRightRadius: 20
     },
+    top2: {
+        flex: .1,
+        backgroundColor: 'lightgreen',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        
+    },
+    leftTopButt: {
+        backgroundColor: "blue",
+        marginBottom: 25,
+        marginLeft: 10,
+        padding: 10,
+        borderRadius: 10,
+        marginTop: 25,
+        
+
+    },
+    rightTopButt: {
+        backgroundColor: 'red',
+        marginBottom: 25,
+        marginRight:10,
+        padding: 10,
+        paddingLeft: 15,
+        paddingRight: 15,
+        borderRadius: 10,
+        marginTop: 25,
+
+    },
+    middleVectical: {
+        flex: 1,
+        flexDirection: 'column',
+        backgroundColor: 'yellow',
+        alignItems: 'center',
+        marginTop: 10,
+        
+        
+    },
     petName: {
         textAlign: 'center',
-        fontSize: 20,
+        fontSize: 15,
         fontWeight: 'bold',
         color: 'black',
-
+        
+        
     },
     petLevel: {
         textAlign: 'center',
-        fontSize: 15,
+        fontSize: 10,
         fontWeight: 'bold',
         color: 'black',
     },
     petMood: {
         textAlign: 'center',
-        fontSize: 15,
+        fontSize: 10,
         fontWeight: 'bold',
         color: 'black',
     },

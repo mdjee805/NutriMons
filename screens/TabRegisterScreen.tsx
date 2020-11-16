@@ -12,8 +12,8 @@ import { useNavigation } from '@react-navigation/native';
 // import DocForm from "react-cross-form";; // npm i react-cross-form --save (https://reactnativeexample.com/easy-form-for-react-and-react-native-apps-with-validation/)
 
 const Register = () => {
-  const [usernameValue, usernameOnChangeText] = React.useState('Enter a valid email address');
-  const [passwordValue, passwordOnChangeText] = React.useState('*******');
+  //const [usernameValue, usernameOnChangeText] = React.useState('Enter a valid email address');
+  //const [passwordValue, passwordOnChangeText] = React.useState('*******');
   const [ data, setData ] = React.useState('Not Found');
   const navigation = useNavigation();
   const win = Dimensions.get('window');
@@ -22,50 +22,64 @@ const Register = () => {
   return (
             <View style={styles.container}>
                 <View style={register.register}>
-                    <View style={{flex: 0.03, backgroundColor: "#ffa514", justifyContent: 'space-around', padding: 5, width: win.width*0.8}}>
-                        <Text style={{fontSize: 20, fontWeight: 'bold', color: 'black', textAlign: 'center'}}>Registration</Text>
+                    <View style={{flex: 0.4, backgroundColor: "#ffa514", padding: 5, width: win.width*0.8}}>
+                        <Text style={{fontSize: 15, fontWeight: 'bold', color: 'black', textAlign: 'center'}}>Registration</Text>
                     </View>
-                    <View style={{flex: 0.15, width: win.width*0.8}}>
-                        <Text style={{fontSize: 20, fontWeight: 'bold'}}>Username:                              </Text>
-                        <TextInput
-                            style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
-                            onChangeText={text => usernameOnChangeText(text)}
-                            value={usernameValue}
-                        />
+                    <View style={{flex: 0.5, width: win.width*0.8}}>
+                        <Text style={{fontSize: 15, fontWeight: 'bold'}}>Username:                              </Text>
                     </View>
-                    <View style={{flex: 0.15, width: win.width*0.8}}>
-                        <Text style={{fontSize: 20, fontWeight: 'bold'}}>Password:             </Text>
-                        <TextInput
-                            style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
-                            onChangeText={text => passwordOnChangeText(text)}
-                            value={passwordValue}
-                        />
+                    <View style={{flex: 0.5, width: win.width*0.8, marginBottom: 10}}>
+                        <TextInput style={textInputStyles.registrationBox} placeholder="Enter a valid email address" underlineColorAndroid="transparent"></TextInput>
                     </View>
-                    <View style={{flex: 0.15, width: win.width*0.8}}>
-                        <Text style={{fontSize: 20, fontWeight: 'bold'}}>Re-enter Password:             </Text>
-                        <TextInput
+                    <View style={{flex: 0.5, width: win.width*0.8}}>
+                        <Text style={{fontSize: 15, fontWeight: 'bold'}}>Re-enter Username:                              </Text>
+                    </View>
+                    <View style={{flex: 0.5, width: win.width*0.8, marginBottom: 10}}>
+                        <TextInput style={textInputStyles.registrationBox} placeholder="Enter a valid email address" underlineColorAndroid="transparent"></TextInput>
+                    </View>
+                    <View style={{flex: 0.5, width: win.width*0.8}}>
+                        <Text style={{fontSize: 15, fontWeight: 'bold'}}>Password:             </Text>
+                        {/*<TextInput
                             style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
                             onChangeText={text => passwordOnChangeText(text)}
                             value={passwordValue}
-                        />
+                        />*/}
                     </View>
-                    <View style={{flex: 0.15, width: win.width*0.8}}>
-                        <Text style={{fontSize: 20, fontWeight: 'bold'}}>Re-enter Password:             </Text>
-                        <TextInput
+                    <View style={{flex: 0.5, width: win.width*0.8, marginBottom: 10}}>
+                        <TextInput style={textInputStyles.registrationBox} placeholder="*******" underlineColorAndroid="transparent"></TextInput>
+                        {/*<TextInput
                             style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
                             onChangeText={text => passwordOnChangeText(text)}
                             value={passwordValue}
-                        />
+                        />*/}
                     </View>
-                    <View style={checkbox.checkboxContainer}>
-                        <CheckBox
-                            value={isSelected}
-                            onValueChange={setSelection}
-                            style={checkbox.checkbox}
-                        />
-                        <Text style={checkbox.label}>Do you agree with the Terms and Conditions?</Text>
+                    <View style={{flex: 0.5, width: win.width*0.8}}>
+                        <Text style={{fontSize: 15, fontWeight: 'bold'}}>Re-enter Password:             </Text>
+                        {/*<TextInput
+                            style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
+                            onChangeText={text => passwordOnChangeText(text)}
+                            value={passwordValue}
+                        />*/}
                     </View>
-                    <View style={{flex: 0.15, width: win.width*0.8}}>
+                    <View style={{flex: 0.5, width: win.width*0.8, marginBottom: 10}}>
+                        <TextInput style={textInputStyles.registrationBox} placeholder="*******" underlineColorAndroid="transparent"></TextInput>
+                        {/*<TextInput
+                            style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
+                            onChangeText={text => passwordOnChangeText(text)}
+                            value={passwordValue}
+                        />*/}
+                    </View>
+                    <View style={{flex: 1.5, width: win.width*0.8, flexDirection: "row"}}>
+                        <View style={checkbox.checkboxContainer}>
+                            <CheckBox
+                                value={isSelected}
+                                onValueChange={setSelection}
+                                style={checkbox.checkbox}
+                            />
+                            <Text style={checkbox.label}>Do you agree with the Terms and Conditions?</Text>
+                        </View>
+                    </View>
+                    <View style={{flex: 0.15, width: win.width*0.5, marginBottom: 10}}>
                         <TouchableOpacity
                             style = {textInputStyles.submitButton}
                             onPress = {
@@ -92,8 +106,8 @@ const register = StyleSheet.create({
   },
   register: {
     flex: 1,  
-    margin: 30, 
-    padding: 60,
+    margin: 15, 
+    padding: 30,
     borderWidth: 2, 
     borderTopLeftRadius: 20, 
     borderTopRightRadius: 20, 
@@ -114,13 +128,14 @@ const checkbox = StyleSheet.create({
   checkboxContainer: {
     flexDirection: "row",
     marginBottom: 20,
+    marginTop: 20,
   },
   checkbox: {
     alignSelf: "center",
   },
   label: {
-    fontSize: 20,
-    margin: 8,
+    fontSize: 15,
+    margin: 3,
   },
 });
 
@@ -143,5 +158,12 @@ const textInputStyles = StyleSheet.create({
    submitButtonText:{
       color: 'white',
       textAlign: 'center'
-   }
+   },
+   registrationBox: {
+      height: 40,
+      borderColor: "black",
+      borderWidth: 2,
+      backgroundColor: '#ffffff',
+      paddingLeft: 10,
+    },
 });

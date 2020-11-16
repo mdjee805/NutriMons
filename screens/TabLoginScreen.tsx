@@ -21,16 +21,15 @@ const Login = () => {
   return (
             <View style={styles.container}>
                 <View style={loginStyle.login}>
-                    <View style={{flex: 0.03, backgroundColor: "#ffa514", justifyContent: 'space-around', padding: 5, width: win.width*0.8}}>
+                    <View style={{flex: 0.15, backgroundColor: "#ffa514", justifyContent: 'space-around', padding: 5, width: win.width*0.8}}>
                         <Text style={{fontSize: 20, fontWeight: 'bold', color: 'black', textAlign: 'center'}}>Login</Text>
                     </View>
-                    <View style={{flex: 0.01, width: win.width*0.8, alignItems: 'center',}}/>
-                    <View style={{ flex: 0.15, width: win.width * 0.8 }}>
+                    <View style={{ flex: 1, width: win.width*0.8 }}>
                     
                         <Text style={{ fontSize: 20, fontWeight: 'bold', } }>Username:                              </Text>
                         
 
-                        <Image style={{ width: 30, height: 30 }} source={require('../assets/images/userIcon.png')} />
+                        <Image style={{ width: 30, height: 30, marginBottom: 10 }} source={require('../assets/images/userIcon.png')} />
                         {/*<TextInput
                             style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
                             onChangeText={text => usernameOnChangeText(text)}
@@ -38,10 +37,10 @@ const Login = () => {
                         />*/}
                   <TextInput style={textInputStyles.loginBox} placeholder="Username" ></TextInput>
                     </View>
-                    <View style={{flex: 0.15, width: win.width*0.8}}>
+                    <View style={{flex: 1, width: win.width*0.8}}>
                         <Text style={{fontSize: 20, fontWeight: 'bold'}}>Password:             </Text>
                         
-                        <Image style={{ width: 30, height: 30 }} source={require('../assets/images/lock.png')} />
+                        <Image style={{ width: 30, height: 30, marginBottom: 10 }} source={require('../assets/images/lock.png')} />
 
                   {/* <TextInput
                             style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
@@ -51,7 +50,7 @@ const Login = () => {
                   <TextInput style={textInputStyles.loginBox} placeholder="Password" underlineColorAndroid="transparent"></TextInput>
 
                     </View>
-                    <View style={{flex: 0.15, width: win.width*0.8}}>
+                    <View style={{flex: 0.5, width: win.width*0.8}}>
                         <TouchableOpacity
                             style = {textInputStyles.submitButton}
                             onPress = {
@@ -60,11 +59,10 @@ const Login = () => {
                             <Text style = {textInputStyles.submitButtonText}> Login </Text>
                         </TouchableOpacity>
                     </View>
-                    <View style={{flex: 0.03, width: win.width*0.8, alignItems: 'center',}}>
+                    <View style={{flex: 0.5, width: win.width*0.8, alignItems: 'center',}}>
                         <Text style={{fontSize: 15, fontWeight: 'bold'}}>Forgot Username / Password?</Text>
                     </View>
-                    <View style={{flex: 0.15, width: win.width*0.8, alignItems: 'center',}}/>
-                    <View style={{flex: 0.03, width: win.width*0.3, justifyContent: 'center'}}>
+                    <View style={{flex: 0.03, width: win.width*0.8, justifyContent: 'center'}}>
                         <Button title="Create Your Account" onPress={() => navigation.navigate("Register")} />
                         {/*
                         <TouchableOpacity
@@ -94,8 +92,8 @@ const loginStyle = StyleSheet.create({
   },
   login: {
     flex: 1,  
-    margin: 30, 
-    padding: 60,
+    margin: 15, 
+    padding: 30,
     borderWidth: 2, 
     borderTopLeftRadius: 20, 
     borderTopRightRadius: 20, 
@@ -131,6 +129,7 @@ const textInputStyles = StyleSheet.create({
         height: 40,
         borderColor: "black",
         borderWidth: 2,
-        
+        backgroundColor: '#ffffff',
+        paddingLeft: 10,
     },
 });
