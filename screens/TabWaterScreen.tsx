@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Image, Button, SafeAreaView, TextInput } from 'react-native';
+import { StyleSheet, Image, Button, SafeAreaView, Dimensions, TextInput } from 'react-native';
 import { Text, View } from '../components/Themed';
 
 import styles from "../assets/styles/styles";
@@ -14,7 +14,8 @@ import { useNavigation } from '@react-navigation/native';
 export default function TabWater() {
     const navigation = useNavigation();
     const [amountOfWaterValue, amountOfWaterOnChangeText] = React.useState('Amount of water');
-
+    const win = Dimensions.get('window');
+    const ratio = (win.height * 0.5) / 302; // actual height of image is 302
     return (
         <View style={styles.container}>
             <View style={dashboard.top}>
@@ -28,27 +29,29 @@ export default function TabWater() {
                 </View>
             </View>
             <View style={dashboard.middle}>
-                <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "column", flex: 1, padding: 30 }}>
-                    <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 1 }} />
-                        <Text style={[dashboard.title, { flex: 1 }]}>
-                            Insert visual for tracker here
-                        </Text>
-                    <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", flex: 1, padding: 30, justifyContent: "space-around" }}>
-                        <View style={{ backgroundColor: "lightblue", flex: 0.4, flexDirection: "column", alignContent: "center",}}>
-                            <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Enter the amount of water consumed:             </Text>
-                            <TextInput
-                                style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
-                                onChangeText={text => amountOfWaterOnChangeText(text)}
-                                value={amountOfWaterValue}
-                            />
-                        </View>
-                        <View style={{ backgroundColor: "lightblue", flex: 0.4, flexDirection: "column", alignContent: "center", paddingTop: 27 }}>
-                            <Button title="Water Settings" />
+                <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", flex: 1, justifyContent: "center" }}>
+                        <Image style={{ width: 407 * ratio, height: win.height * 0.5 }} source={require('../assets/images/water.jpg')} />
+                </View>
+            </View>
+            <View style={dashboard.bottom}>
+                <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", flex: .3, alignItems: "center", paddingTop: 40 }}>
+                        <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", flex: 1, padding: 30, justifyContent: "space-around" }}>
+                            <View style={{ backgroundColor: "lightblue", flex: 0.5, flexDirection: "column", alignContent: "center", }}>
+                                <Text style={{ fontSize: 20, fontWeight: 'bold' }}>Enter the amount of water consumed:             </Text>
+                                <TextInput
+                                    style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
+                                    onChangeText={text => amountOfWaterOnChangeText(text)}
+                                    value={amountOfWaterValue} />
+                            </View>
+                            <View style={{ backgroundColor: "lightblue", flex: 0.5, flexDirection: "column", alignContent: "center", paddingTop: 27 }}>
+                                <Button title="Water Settings" />
+                            </View>
                         </View>
                     </View>
                 </View>
             </View>
-        </View>
+        
+        
     );
 }
 
@@ -73,7 +76,7 @@ const dashboard = StyleSheet.create({
         borderBottomRightRadius: 20
     },
     middle: {
-        flex: 0.9,
+        flex: 0.7,
         flexDirection: "row",
         margin: 30,
         borderWidth: 2,
@@ -83,5 +86,16 @@ const dashboard = StyleSheet.create({
         borderBottomRightRadius: 20,
         justifyContent: 'space-evenly',
         backgroundColor: "lightblue"
+    },
+    bottom: {
+        margin: 10,
+        marginTop: 0,
+        flex: 0.2,
+        backgroundColor: "lightblue",
+        borderWidth: 2,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
+        borderBottomLeftRadius: 20,
+        borderBottomRightRadius: 20,
     },
 });
