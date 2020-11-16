@@ -7,31 +7,31 @@ import styles from "../assets/styles/styles";
 
 export default function ProfileScreen() {
     return (
-        <View style={[styles.container, {}]}>
+        <View style={[styles.roundedContainer, {margin: 5, padding: 10}]}>
 
             {//Title
             }
-            <View style={[styles.rowContainer, { flex: .1 }]}>
-                <View style={styles.itemContainer}>
-                    <Text style={styles.title}>ProfileScreen</Text>
+            <View style={[styles.rowContainer, { backgroundColor:'lightblue', flex: .1 }]}>
+                <View style={[styles.itemContainer, { backgroundColor: '#ffa514' }]}>
+                    <Text style={styles.title}>Profile</Text>
                 </View>
             </View>
 
             {//Profile Icon
             }
-            <View style={[styles.rowContainer, { flex: .15, backgroundColor: 'lightblue', justifyContent: 'flex-start', alignItems: 'flex-start' }]}>
-                <View style={[styles.itemContainer, { marginTop: 10, marginBottom: 10, marginLeft: 10, flex: .1, justifyContent: 'flex-start', alignItems: 'flex-start' }]}>
+            <View style={[styles.rowContainer, { flex: .1, backgroundColor: 'lightblue', justifyContent: 'flex-start', alignItems: 'flex-start' }]}>
+                <View style={[styles.itemContainer, { backgroundColor: 'lightblue',  marginTop: 10, marginBottom: 10, marginLeft: 10, flex: .1, justifyContent: 'flex-start', alignItems: 'flex-start' }]}>
                     <Image style={{ width: 40, height: 40 }} source={require('../assets/images/profilePic.png')} />
                     <Image style={{ width: 10, height: 10, margin: 5, justifyContent: 'flex-start', alignItems: 'flex-start' }} source={require('../assets/images/pencil.png')} />
                 </View>
             </View>
             
-            <View style={[styles.rowContainer, { flex: .25, backgroundColor: 'lightblue', alignItems: 'flex-start', justifyContent: 'space-between' }]}>
+            <View style={[styles.rowContainer, { flex: .3, backgroundColor: 'lightblue', alignItems: 'flex-start', justifyContent: 'space-between'}]}>
 
                 {//Personal
                 }
-                <View style={[styles.container, { flex: .3, margin:10, alignItems: 'flex-start', justifyContent: 'flex-start' }]}>
-                    <View style={styles.rowContainer}>
+                <View style={[styles.roundedContainer, { backgroundColor: 'white', flex: .3, margin: 10, alignItems: 'flex-start', justifyContent: 'flex-start', padding: 5 }]}>
+                    <View style={[styles.rowContainer, { backgroundColor: '' }]}>
                         <Text style={{ fontWeight: 'bold' }}>
                             Personal
                           </Text>
@@ -61,8 +61,8 @@ export default function ProfileScreen() {
 
                 {//Financial
                 }
-                <View style={[styles.container, { flex: .3, margin: 10, alignItems: 'flex-start', justifyContent: 'flex-start' }]}>
-                    <View style={styles.rowContainer}>
+                <View style={[styles.roundedContainer, { backgroundColor: 'white', flex: .4, margin: 10, alignItems: 'flex-start', justifyContent: 'flex-start', padding: 5 }]}>
+                    <View style={[styles.rowContainer, { backgroundColor: '' }]}>
                         <Text style={{ fontWeight: 'bold' }}>
                             Financial
                           </Text>
@@ -96,8 +96,8 @@ export default function ProfileScreen() {
 
                 {//Health Factors
                 }
-                <View style={[styles.container, { flex: .4, margin: 10, alignItems: 'flex-start', justifyContent: 'flex-start' }]}>
-                    <View style={styles.rowContainer}>
+                <View style={[styles.roundedContainer, { backgroundColor: 'white', flex: .4, margin: 10, alignItems: 'flex-start', justifyContent: 'flex-start', padding: 5 }]}>
+                    <View style={[styles.rowContainer, { backgroundColor: '' }]}>
                         <Text style={{ fontWeight: 'bold' }}>
                             Age: 68
                           </Text>
@@ -143,8 +143,8 @@ export default function ProfileScreen() {
 
                 {//Health Goals
                 }
-                <View style={[styles.container, { flex: .6, margin: 10, alignItems: 'flex-start', justifyContent: 'flex-start' }]}>
-                    <View style={styles.rowContainer}>
+                <View style={[styles.roundedContainer, { backgroundColor: 'white', flex: .6, margin: 10, alignItems: 'flex-start', justifyContent: 'flex-start', padding: 5 }]}>
+                    <View style={[styles.rowContainer, { backgroundColor: '' }]}>
                         <Text style={{ fontWeight: 'bold' }}>
                             Health Goals
                           </Text>

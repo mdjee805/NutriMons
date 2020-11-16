@@ -13,17 +13,17 @@ export default {
           },
           TabProfile: {
             screens: {
-              TabProfileScreen: 'TabProfileScreen',
+              TabProfileScreen: 'Profile',
             },
            },
            TabLogin: {
             screens: {
-              TabLoginScreen: 'TabLoginScreen',
+              TabLoginScreen: 'Login',
             },
            },
            TabRegister: {
             screens: {
-              TabRegisterScreen: 'TabRegisterScreen',
+              TabRegisterScreen: 'Register',
             },
            },
            TabTamagotchi: {

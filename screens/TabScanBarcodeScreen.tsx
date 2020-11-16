@@ -12,6 +12,7 @@ import BarcodeScannerComponent from "react-webcam-barcode-scanner"; // npm i rea
 
 export default function TabScanBarcode() {
   const [ data, setData ] = React.useState('Not Found');
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
         <View style={meal.top}>

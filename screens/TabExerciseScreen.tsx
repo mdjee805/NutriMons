@@ -10,7 +10,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import SelectSearch from 'react-select-search'; // npm install react-select-search --save (https://reactjsexample.com/react-powered-select-box-with-filter/)
 
-import cssStyles from '../assets/styles/style.css';
+import cssStyles from '../assets/styles/styles';
 
 const options = [
     {name: 'Aerobic'},
@@ -79,7 +79,7 @@ const Exercise = () => {
                 </View>
             </View>
             <View style={{flex: 0.1}}/>
-            <View style={{backgroundColor: "lightblue", flex: 0.4, justifyContent: 'space-evenly', alignItems: 'left'}}>
+            <View style={{backgroundColor: "lightblue", flex: 0.4, justifyContent: 'space-evenly', alignItems: 'flex-start'}}>
                 <View style={{flex: 0.25, backgroundColor: "#ffa514", justifyContent: 'space-around', padding: 5}}>
                     <Text style={{fontSize: 15, fontWeight: 'bold', color: 'black', textAlign: 'center'}}>Create A New Workout Activity</Text>
                 </View>
@@ -153,7 +153,7 @@ const exercise = StyleSheet.create({
     borderBottomLeftRadius: 20, 
     borderBottomRightRadius: 20,
     justifyContent: 'space-evenly',
-    alignItems: 'left',
+    alignItems: 'center',
     backgroundColor: "lightblue"
   },
 });
@@ -189,7 +189,7 @@ export default Exercise;
 {
     /*
             <View style={exercise.bottom}>      
-            <View style={{backgroundColor: "lightblue", flex: 0.3, flexDirection: "column", justifyContent: 'space-evenly', alignItems: 'left', height: win.height*0.6}}>  
+            <View style={{backgroundColor: "lightblue", flex: 0.3, flexDirection: "column", justifyContent: 'space-evenly', alignItems: 'flex-start', height: win.height*0.6}}>  
                 <View style={{flex: 0.05, backgroundColor: "#2196F3", justifyContent: 'space-around', padding: 5}}>
                     <Text style={{fontSize: 15, fontWeight: 'bold', color: 'white', textAlign: 'center'}}>Select an existing workout</Text>
                 </View>
@@ -205,7 +205,7 @@ export default Exercise;
                     />
                 </View>
             </View>
-            <View style={{backgroundColor: "lightblue", flex: 0.6, flexDirection: "column", justifyContent: 'space-evenly', alignItems: 'left', height: win.height*0.6, marginLeft: 20}}>
+            <View style={{backgroundColor: "lightblue", flex: 0.6, flexDirection: "column", justifyContent: 'space-evenly', alignItems: 'flex-start', height: win.height*0.6, marginLeft: 20}}>
                 <View style={{flex: 0.25, backgroundColor: "#2196F3", justifyContent: 'space-around', padding: 5}}>
                     <Text style={{fontSize: 15, fontWeight: 'bold', color: 'white', textAlign: 'center'}}>Create A New Workout Activity</Text>
                 </View>

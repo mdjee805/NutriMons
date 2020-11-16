@@ -8,7 +8,7 @@ import { RootStackParamList } from '../types';
 import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 
-import ProfileScreen from '../screens/TabProfileScreen';
+/*import ProfileScreen from '../screens/TabProfileScreen';
 import LoginScreen from '../screens/TabLoginScreen';
 import RegisterScreen from '../screens/TabRegisterScreen';
 import TamagotchiScreen from '../screens/TabTamagotchiScreen';
@@ -17,8 +17,8 @@ import MealScreen from '../screens/TabMealScreen';
 import AddMealScreen from '../screens/TabAddMealScreen';
 import MealPlanScreen from '../screens/TabMealPlanScreen';
 import BarcodeScreen from '../screens/TabScanBarcodeScreen';
-//import NutrientScreen from '../screens/TabNutrientScreen';
-import ExerciseScreen from '../screens/TabExerciseScreen';
+import NutrientScreen from '../screens/TabNutrientScreen';
+import ExerciseScreen from '../screens/TabExerciseScreen';*/
 
 
 
@@ -42,7 +42,7 @@ function RootNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Root" component={BottomTabNavigator} />
-      <Stack.Screen name="Profile" component={ProfileScreen} />
+      {/*<Stack.Screen name="Profile" component={ProfileScreen} />
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Register" component={RegisterScreen} />
       <Stack.Screen name="Tamagotchi" component={TamagotchiScreen} />
@@ -51,8 +51,8 @@ function RootNavigator() {
       <Stack.Screen name="AddMeal" component={AddMealScreen} />
       <Stack.Screen name="MealPlan" component={MealPlanScreen} />
       <Stack.Screen name="Barcode" component={BarcodeScreen} />
-      {/*<Stack.Screen name="Nutrient" component={NutrientScreen} />*/}
-      <Stack.Screen name="Exercise" component={ExerciseScreen} />
+      <Stack.Screen name="Nutrient" component={NutrientScreen} />
+      <Stack.Screen name="Exercise" component={ExerciseScreen} />*/}
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );

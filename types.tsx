@@ -50,6 +50,10 @@ export type TabWaterParamList = {
     TabWaterScreen: undefined;
 };
 
+export type TabBarcodeParamList = {
+    TabBarcodeScreen: undefined;
+}
+
 export type TabMealParamList = {
     TabMealScreen: undefined;
 };

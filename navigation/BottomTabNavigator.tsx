@@ -313,13 +313,13 @@ const TabBarcodeStack = createStackNavigator<TabBarcodeParamList>();
 
 function TabBarcodeNavigator() {
     return (
-        <TabMealStack.Navigator>
-            <TabMealStack.Screen
+        <TabBarcodeStack.Navigator>
+            <TabBarcodeStack.Screen
                 name="TabBarcodeScreen"
                 component={TabBarcodeScreen}
                 options={{ headerTitle: 'Scan Barcode' }}
             />
-        </TabMealStack.Navigator>
+        </TabBarcodeStack.Navigator>
     );
 }
 const TabWaterStack = createStackNavigator<TabWaterParamList>();

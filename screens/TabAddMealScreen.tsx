@@ -40,7 +40,7 @@ const mealPlan = StyleSheet.create({
     borderBottomLeftRadius: 20, 
     borderBottomRightRadius: 20,
     justifyContent: 'space-evenly', 
-    alignItems: 'left',
+    alignItems: 'flex-start',
     backgroundColor: "lightblue"
   },
 });
@@ -188,6 +188,7 @@ const MealPlan = () => {
   const [servingWeightValue, servingWeightOnChangeText] = React.useState('Serving Weight (in grams)');
   const [caloriesValue, caloriesOnChangeText] = React.useState('Calories Per Serving');
   const win = Dimensions.get('window');
+  const navigation = useNavigation();
 
   return (
             <View style={styles.container}>
