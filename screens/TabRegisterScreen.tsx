@@ -12,8 +12,8 @@ import { useNavigation } from '@react-navigation/native';
 // import DocForm from "react-cross-form";; // npm i react-cross-form --save (https://reactnativeexample.com/easy-form-for-react-and-react-native-apps-with-validation/)
 
 const Register = () => {
-  const [usernameValue, usernameOnChangeText] = React.useState('Enter a valid email address');
-  const [passwordValue, passwordOnChangeText] = React.useState('*******');
+  //const [usernameValue, usernameOnChangeText] = React.useState('Enter a valid email address');
+  //const [passwordValue, passwordOnChangeText] = React.useState('*******');
   const [ data, setData ] = React.useState('Not Found');
   const navigation = useNavigation();
   const win = Dimensions.get('window');
@@ -27,35 +27,29 @@ const Register = () => {
                     </View>
                     <View style={{flex: 0.15, width: win.width*0.8}}>
                         <Text style={{fontSize: 20, fontWeight: 'bold'}}>Username:                              </Text>
-                        <TextInput
+                        <TextInput style={textInputStyles.registrationBox} placeholder="Enter a valid email address" underlineColorAndroid="transparent"></TextInput>
+                    </View>
+                    <View style={{flex: 0.15, width: win.width*0.8}}>
+                        <Text style={{fontSize: 20, fontWeight: 'bold'}}>Re-enter Username:             </Text>
+                        <TextInput style={textInputStyles.registrationBox} placeholder="Enter a valid email address" underlineColorAndroid="transparent"></TextInput>
+                        {/*<TextInput
                             style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
-                            onChangeText={text => usernameOnChangeText(text)}
-                            value={usernameValue}
-                        />
+                            onChangeText={text => passwordOnChangeText(text)}
+                            value={passwordValue}
+                        />*/}
                     </View>
                     <View style={{flex: 0.15, width: win.width*0.8}}>
                         <Text style={{fontSize: 20, fontWeight: 'bold'}}>Password:             </Text>
-                        <TextInput
-                            style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
-                            onChangeText={text => passwordOnChangeText(text)}
-                            value={passwordValue}
-                        />
+                        <TextInput style={textInputStyles.registrationBox} placeholder="*******" underlineColorAndroid="transparent"></TextInput>
                     </View>
                     <View style={{flex: 0.15, width: win.width*0.8}}>
                         <Text style={{fontSize: 20, fontWeight: 'bold'}}>Re-enter Password:             </Text>
-                        <TextInput
+                        <TextInput style={textInputStyles.registrationBox} placeholder="*******" underlineColorAndroid="transparent"></TextInput>
+                        {/*<TextInput
                             style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
                             onChangeText={text => passwordOnChangeText(text)}
                             value={passwordValue}
-                        />
-                    </View>
-                    <View style={{flex: 0.15, width: win.width*0.8}}>
-                        <Text style={{fontSize: 20, fontWeight: 'bold'}}>Re-enter Password:             </Text>
-                        <TextInput
-                            style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
-                            onChangeText={text => passwordOnChangeText(text)}
-                            value={passwordValue}
-                        />
+                        />*/}
                     </View>
                     <View style={checkbox.checkboxContainer}>
                         <CheckBox
@@ -143,5 +137,12 @@ const textInputStyles = StyleSheet.create({
    submitButtonText:{
       color: 'white',
       textAlign: 'center'
-   }
+   },
+   registrationBox: {
+      height: 40,
+      borderColor: "black",
+      borderWidth: 2,
+      backgroundColor: '#ffffff',
+      paddingLeft: 10,
+    },
 });

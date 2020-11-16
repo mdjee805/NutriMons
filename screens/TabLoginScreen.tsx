@@ -131,6 +131,7 @@ const textInputStyles = StyleSheet.create({
         height: 40,
         borderColor: "black",
         borderWidth: 2,
-        
+        backgroundColor: '#ffffff',
+        paddingLeft: 10,
     },
 });
