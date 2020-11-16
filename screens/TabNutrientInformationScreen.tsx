@@ -7,11 +7,11 @@ import styles from "../assets/styles/styles";
 
 export default function NutrientInformation() {
     return (
-        <View style={[styles.roundedContainer, { margin: 0, padding: 5 }]}>
+        <View style={[styles.roundedContainer, { margin: 0, padding: 3 }]}>
 
             {//Title
             }
-            <View style={[styles.rowContainer, { backgroundColor: '#ffa514' }]}>
+            <View style={[styles.rowContainer, { backgroundColor: '#ffa514', marginTop: 3 }]}>
                 <Text style={styles.title}>Nutrient Information Screen</Text>
             </View>
 

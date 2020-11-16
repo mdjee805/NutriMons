@@ -20,7 +20,7 @@ export default function TabMichael() {
             }
             <View style={tamagotchi.top2}>
 
-                <View style={{ flex: .3, backgroundColor: 'green' }}>
+                <View style={{ flex: .2, backgroundColor: 'green' }}>
                 {//Left button
                 }
                 <TouchableOpacity
@@ -33,13 +33,13 @@ export default function TabMichael() {
 
                 {//Text in the middle 
                 }
-                <View style={tamagotchi.middleVectical}>
+                <View style={[tamagotchi.middleVectical, { flex: .6 }]}>
                     <Text style={[tamagotchi.petName]}>Minh</Text>
                     <Text style={[tamagotchi.petLevel]}>Level 1000</Text>
                     <Text style={[tamagotchi.petMood]}>Sad</Text>
                 </View>
 
-                <View style={{ flex: .3, backgroundColor: 'green' }}>
+                <View style={{ flex: .2, backgroundColor: 'green' }}>
                 {//Right button
                 }
                 <TouchableOpacity
