@@ -37,7 +37,7 @@ export default function TabMeal() {
                     </TouchableOpacity>
                 </View>
                 <View style={{ backgroundColor: "", flex: 0.7 }}>
-                <Text style={[mealPlan.title, { flex: 1 }]}>
+                <Text style={[mealPlan.title, { textAlign: 'center', flex: 1 }]}>
                     Meal Plan
                 </Text>
                 </View>

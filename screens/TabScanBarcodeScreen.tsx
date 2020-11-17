@@ -23,7 +23,7 @@ export default function TabScanBarcode() {
                     </TouchableOpacity>
                 </View>
                 <View style={{ backgroundColor: "", flex: 0.7 }}>
-                <Text style={[styles.title, { flex: 1 }]}>
+                <Text style={[styles.title, { textAlign: 'center', flex: 1 }]}>
                     Scan Barcode
                 </Text>
                 </View>

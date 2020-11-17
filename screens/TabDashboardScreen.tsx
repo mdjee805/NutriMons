@@ -24,7 +24,7 @@ export default function TabDashboard() {
                   </TouchableOpacity>
               </View>
               <View style={{ backgroundColor: "", flex: 0.7 }}>
-                <Text style={[dashboard.title, { flex: 1 }]}>
+                <Text style={[dashboard.title, { textAlign: 'center', flex: 1 }]}>
                     Dashboard
                 </Text>
               </View>
