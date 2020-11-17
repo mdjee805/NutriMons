@@ -15,36 +15,32 @@ export default function TabNutrientOverview() {
     const navigation = useNavigation();
     const [amountOfWaterValue, amountOfWaterOnChangeText] = React.useState('Amount of water');
     const win = Dimensions.get('window');
-    const ratio = (win.height * 0.7) / 207; // actual height of image is 207
+    const ratio = (win.width * 0.7) / 350; // actual width of image is 305
 
     return (
         <View style={styles.container}>
             <View style={dashboard.top}>
-                <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", margin: 0 }}>
-                    <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2 }}>
-                        <SafeAreaView>
-                            <TouchableOpacity onPress={() => { navigation.navigate("TabProfile") }}>
-                                <Image style={{ width: 40, height: 40, flex: 1 }} source={require('../assets/images/profilePic.png')} />
-                            </TouchableOpacity>
-                        </SafeAreaView>
+                <View style={{backgroundColor: "", flexDirection: "row", margin: 0}}>
+                    <View style={{ backgroundColor: "", flex: 0.15, alignItems: 'flex-start', justifyContent: 'center' }}>
+                        <TouchableOpacity onPress={() => { navigation.navigate("TabProfile") } }>
+                            <Image style={{width: 40, height: 40, flex: 1}} source={require('../assets/images/profilePic.png')} />
+                        </TouchableOpacity>
                     </View>
-                    <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.6 }}>
-                        <Text style={[dashboard.title, { flex: 1 }]}>
-                            Nutrient Overview
-                        </Text>
+                    <View style={{ backgroundColor: "", flex: 0.7 }}>
+                    <Text style={[styles.title, { textAlign: 'center', flex: 1 }]}>
+                        Nutrient Overview
+                    </Text>
                     </View>
-                    <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2, alignItems: 'flex-end' }}>
-                        <SafeAreaView style={{ flex: 1 }}>
-                            <TouchableOpacity onPress={() => { navigation.navigate("TabTamagotchi") }}>
-                                <Image style={{ width: 40, height: 40, flex: 1 }} source={require('../assets/images/tamaPic.png')} />
-                            </TouchableOpacity>
-                        </SafeAreaView>
+                    <View style={{ backgroundColor: "", flex: 0.15, alignItems: 'flex-end', justifyContent:'center' }}>
+                        <TouchableOpacity onPress={() => { navigation.navigate("TabTamagotchi") } }>
+                            <Image style={{ width: 40, height: 40, flex: 1 }} source={require('../assets/images/tamaPic.png')} />
+                        </TouchableOpacity>
                     </View>
                 </View>
             </View>
             <View style={dashboard.middle}>
                 <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2, alignItems: 'center' }}>
-                    <Image style={{ width: 350 * ratio, height: win.height * 0.7 }} source={require('../assets/images/nutGraph.jpg')} />
+                    <Image style={{ height: 207 * ratio, width: win.width * 0.7 }} source={require('../assets/images/nutGraph.jpg')} />
                 </View>
             </View>
         </View>
