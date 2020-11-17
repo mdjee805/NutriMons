@@ -23,7 +23,7 @@ export default function TabNutrientOverview() {
                 <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", margin: 0 }}>
                     <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2 }}>
                         <SafeAreaView>
-                            <TouchableOpacity onPress={() => { navigation.navigate("Profile") }}>
+                            <TouchableOpacity onPress={() => { navigation.navigate("TabProfile") }}>
                                 <Image style={{ width: 40, height: 40, flex: 1 }} source={require('../assets/images/profilePic.png')} />
                             </TouchableOpacity>
                         </SafeAreaView>
@@ -35,7 +35,7 @@ export default function TabNutrientOverview() {
                     </View>
                     <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2, alignItems: 'flex-end' }}>
                         <SafeAreaView style={{ flex: 1 }}>
-                            <TouchableOpacity onPress={() => { navigation.navigate("Tamagotchi") }}>
+                            <TouchableOpacity onPress={() => { navigation.navigate("TabTamagotchi") }}>
                                 <Image style={{ width: 40, height: 40, flex: 1 }} source={require('../assets/images/tamaPic.png')} />
                             </TouchableOpacity>
                         </SafeAreaView>
