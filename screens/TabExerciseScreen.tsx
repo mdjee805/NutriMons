@@ -13,17 +13,17 @@ import SelectSearch from 'react-select-search'; // npm install react-select-sear
 import cssStyles from '../assets/styles/styles';
 
 const options = [
-    {name: 'Aerobic'},
-    {name: 'Basketball'},
-    {name: 'Badminton'},
-    {name: 'Baseball'},
-    {name: 'Bench Press'},
-    {name: 'Bicycling'},
-    {name: 'Boxing'},
-    {name: 'Soccer'},
-    {name: 'Running'},
-    {name: 'Volleyball'},
-    {name: 'Walking'},
+    {name: 'Aerobic', value: 'Aerobic'},
+    {name: 'Basketball', value: 'Basketball'},
+    {name: 'Badminton', value: 'Badminton'},
+    {name: 'Baseball', value: 'Baseball'},
+    {name: 'Bench Press', value: 'Bench Press'},
+    {name: 'Bicycling', value: 'Bicycling'},
+    {name: 'Boxing', value: 'Boxing'},
+    {name: 'Soccer', value: 'Soccer' },
+    {name: 'Running', value: 'Running'},
+    {name: 'Volleyball', value: 'Volleyball'},
+    {name: 'Walking', value: 'Walking'},
 ];
 
 const Exercise = () => {
@@ -39,31 +39,27 @@ const Exercise = () => {
   return (
     <View style={styles.container}>
         <View style={exercise.top}>
-            <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", margin: 0}}>
-                <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2 }}>
-                    <SafeAreaView>
-                        <TouchableOpacity onPress={() => { navigation.navigate("Profile") } }>
-                            <Image style={{width: 40, height: 40, flex: 1}} source={require('../assets/images/profilePic.png')} />
-                        </TouchableOpacity>
-                    </SafeAreaView>
+            <View style={{backgroundColor: "", flexDirection: "row", margin: 0}}>
+                <View style={{ backgroundColor: "", flex: 0.15, alignItems: 'flex-start', justifyContent: 'center' }}>
+                    <TouchableOpacity onPress={() => { navigation.navigate("TabProfile") } }>
+                        <Image style={{width: 40, height: 40, flex: 1}} source={require('../assets/images/profilePic.png')} />
+                    </TouchableOpacity>
                 </View>
-                <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.6 }}>
-                <Text style={exercise.title}>
+                <View style={{ backgroundColor: "", flex: 0.7 }}>
+                <Text style={[styles.title, { textAlign: 'center', flex: 1 }]}>
                     Exercise
                 </Text>
                 </View>
-                <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2, alignItems: 'flex-end'}}>
-                    <SafeAreaView style={{ flex: 1 }}>
-                        <TouchableOpacity onPress={() => { navigation.navigate("Tamagotchi") } }>
-                            <Image style={{width: 40, height: 40, flex: 1 }} source={require('../assets/images/tamaPic.png')} />
-                        </TouchableOpacity>
-                    </SafeAreaView>
+                <View style={{ backgroundColor: "", flex: 0.15, alignItems: 'flex-end', justifyContent:'center' }}>
+                    <TouchableOpacity onPress={() => { navigation.navigate("TabTamagotchi") } }>
+                        <Image style={{ width: 40, height: 40, flex: 1 }} source={require('../assets/images/tamaPic.png')} />
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>
         <View style={exercise.bottom}>      
             <View style={{backgroundColor: "lightblue", flex: 0.4}}>  
-                <View style={{flex: 0.08, backgroundColor: "#ffa514", justifyContent: 'space-around', padding: 5}}>
+                <View style={{flex: 0.08, backgroundColor: "#ffa514", justifyContent: 'space-around', padding: 5, width: win.width*0.8}}>
                     <Text style={{fontSize: 15, fontWeight: 'bold', color: 'black', textAlign: 'center'}}>Select An Existing Workout</Text>
                 </View>
                 <View style={{flex: 0.1}}/>
@@ -80,11 +76,11 @@ const Exercise = () => {
             </View>
             <View style={{flex: 0.1}}/>
             <View style={{backgroundColor: "lightblue", flex: 0.4, justifyContent: 'space-evenly', alignItems: 'flex-start'}}>
-                <View style={{flex: 0.25, backgroundColor: "#ffa514", justifyContent: 'space-around', padding: 5}}>
+                <View style={{flex: 0.25, backgroundColor: "#ffa514", justifyContent: 'space-around', padding: 5, width: win.width*0.8}}>
                     <Text style={{fontSize: 15, fontWeight: 'bold', color: 'black', textAlign: 'center'}}>Create A New Workout Activity</Text>
                 </View>
                 <View style={{flex: 0.2}}/>
-                <View style={{flex: 0.8}}>
+                <View style={{flex: 0.8, width: win.width*0.7}}>
                     <Text style={{fontSize: 15, fontWeight: 'bold'}}>Name of Exercise:                              </Text>
                     <TextInput
                         style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
@@ -92,7 +88,7 @@ const Exercise = () => {
                         value={nameOfExerciseValue}
                     />
                 </View>
-                <View style={{flex: 0.8, width: win.width*0.2}}>
+                <View style={{flex: 0.8, width: win.width*0.7}}>
                     <Text style={{fontSize: 15, fontWeight: 'bold'}}>Calories/Unit:             </Text>
                     <TextInput
                         style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
@@ -100,7 +96,7 @@ const Exercise = () => {
                         value={caloriesPerUnitValue}
                     />
                 </View>
-                <View style={{flex: 0.8, width: win.width*0.2}}>
+                <View style={{flex: 0.8, width: win.width*0.7}}>
                     <Text style={{fontSize: 15, fontWeight: 'bold'}}>Unit Name:       </Text>
                     <TextInput
                         style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}

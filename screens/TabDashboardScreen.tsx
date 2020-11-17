@@ -19,17 +19,17 @@ export default function TabDashboard() {
       <View style={dashboard.top}>
           <View style={{backgroundColor: "", flexDirection: "row", margin: 0}}>
               <View style={{ backgroundColor: "", flex: 0.15, alignItems: 'flex-start', justifyContent: 'center' }}>
-                  <TouchableOpacity onPress={() => { navigation.navigate("Profile") } }>
+                  <TouchableOpacity onPress={() => { navigation.navigate("TabProfile") } }>
                       <Image style={{width: 40, height: 40, flex: 1}} source={require('../assets/images/profilePic.png')} />
                   </TouchableOpacity>
               </View>
               <View style={{ backgroundColor: "", flex: 0.7 }}>
-                <Text style={[dashboard.title, { flex: 1 }]}>
+                <Text style={[dashboard.title, { textAlign: 'center', flex: 1 }]}>
                     Dashboard
                 </Text>
               </View>
               <View style={{ backgroundColor: "", flex: 0.15, alignItems: 'flex-end', justifyContent:'center' }}>
-                  <TouchableOpacity onPress={() => { navigation.navigate("Tamagotchi") } }>
+                  <TouchableOpacity onPress={() => { navigation.navigate("TabTamagotchi") } }>
                       <Image style={{ width: 40, height: 40, flex: 1 }} source={require('../assets/images/tamaPic.png')} />
                   </TouchableOpacity>
               </View>

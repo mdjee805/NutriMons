@@ -19,25 +19,21 @@ export default function TabMeal() {
   return (
     <View style={styles.container}>
         <View style={meal.top}>
-            <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", margin: 0}}>
-                <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2 }}>
-                    <SafeAreaView>
-                        <TouchableOpacity onPress={() => { navigation.navigate("Profile") } }>
-                            <Image style={{width: 40, height: 40, flex: 1}} source={require('../assets/images/profilePic.png')} />
-                        </TouchableOpacity>
-                    </SafeAreaView>
+            <View style={{backgroundColor: "", flexDirection: "row", margin: 0}}>
+                <View style={{ backgroundColor: "", flex: 0.15, alignItems: 'flex-start', justifyContent: 'center' }}>
+                    <TouchableOpacity onPress={() => { navigation.navigate("TabProfile") } }>
+                        <Image style={{width: 40, height: 40, flex: 1}} source={require('../assets/images/profilePic.png')} />
+                    </TouchableOpacity>
                 </View>
-                <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.6 }}>
-                <Text style={meal.title}>
+                <View style={{ backgroundColor: "", flex: 0.7 }}>
+                <Text style={[styles.title, { textAlign: 'center', flex: 1 }]}>
                     Meal
                 </Text>
                 </View>
-                <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2, alignItems: 'flex-end'}}>
-                    <SafeAreaView style={{ flex: 1 }}>
-                        <TouchableOpacity onPress={() => { navigation.navigate("Tamagotchi") } }>
-                            <Image style={{width: 40, height: 40, flex: 1 }} source={require('../assets/images/tamaPic.png')} />
-                        </TouchableOpacity>
-                    </SafeAreaView>
+                <View style={{ backgroundColor: "", flex: 0.15, alignItems: 'flex-end', justifyContent:'center' }}>
+                    <TouchableOpacity onPress={() => { navigation.navigate("TabTamagotchi") } }>
+                        <Image style={{ width: 40, height: 40, flex: 1 }} source={require('../assets/images/tamaPic.png')} />
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>
@@ -46,19 +42,19 @@ export default function TabMeal() {
                 <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "column", flex: 1, justifyContent: 'space-around'}}>
                     <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flex: 1}} />
                         <View style={{backgroundColor: "lightblue", flex: 1, marginBottom: 20}}>
-                            <Button title="Scan Barcode" onPress={() => navigation.navigate("Barcode")} />
+                            <Button title="Scan Barcode" onPress={() => navigation.navigate("TabBarcode")} />
                             <SafeAreaView style = {{marginTop: 20, justifyContent: "center", alignItems: "center"}}>
-                                <TouchableOpacity onPress={() => navigation.navigate("Barcode") }>
+                                <TouchableOpacity onPress={() => navigation.navigate("TabBarcode") }>
                                     <Image style={{width: (1280*0.5)*ratio, height: win.height*0.3, flex: 1 }} source={require('../assets/images/barcode.png')} />
                                 </TouchableOpacity>
                             </SafeAreaView>
                         </View>
                         <View style={{backgroundColor: "lightblue", flex: 0.2}}/>
                         <View style={{backgroundColor: "lightblue", flex: 1}}>
-                            <Button title="Manually Add Meal" onPress={() => navigation.navigate("AddMeal")} />
+                            <Button title="Manually Add Meal" onPress={() => navigation.navigate("TabAddMeal")} />
                         </View>
                         <View style={{backgroundColor: "lightblue", flex: 1}}>
-                            <Button title="Create Meal Plan" onPress={() => navigation.navigate("MealPlan")} />
+                            <Button title="Create Meal Plan" onPress={() => navigation.navigate("TabMealPlan")} />
                         </View>
                     <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 1 }} />
                 </View>

@@ -33,7 +33,7 @@ const mealPlan = StyleSheet.create({
   bottom: {
     flex: 0.9,  
     margin: 30, 
-    padding: 60,
+    padding: 20,
     borderWidth: 2, 
     borderTopLeftRadius: 20, 
     borderTopRightRadius: 20, 
@@ -193,30 +193,26 @@ const MealPlan = () => {
   return (
             <View style={styles.container}>
                 <View style={mealPlan.top}>
-                    <View style={{backgroundColor: "rgba(255, 255, 255, 0)", flexDirection: "row", margin: 0}}>
-                        <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2 }}>
-                            <SafeAreaView>
-                                <TouchableOpacity onPress={() => { navigation.navigate("Profile") } }>
-                                    <Image style={{width: 40, height: 40, flex: 1}} source={require('../assets/images/profilePic.png')} />
-                                </TouchableOpacity>
-                            </SafeAreaView>
+                    <View style={{backgroundColor: "", flexDirection: "row", margin: 0}}>
+                        <View style={{ backgroundColor: "", flex: 0.15, alignItems: 'flex-start', justifyContent: 'center' }}>
+                            <TouchableOpacity onPress={() => { navigation.navigate("TabProfile") } }>
+                                <Image style={{width: 40, height: 40, flex: 1}} source={require('../assets/images/profilePic.png')} />
+                            </TouchableOpacity>
                         </View>
-                        <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.6 }}>
-                        <Text style={mealPlan.title}>
+                        <View style={{ backgroundColor: "", flex: 0.7 }}>
+                        <Text style={[styles.title, { textAlign: 'center', flex: 1 }]}>
                             Add Custom Meal
                         </Text>
                         </View>
-                        <View style={{ backgroundColor: "rgba(255, 255, 255, 0)", flex: 0.2, alignItems: 'flex-end'}}>
-                            <SafeAreaView style={{ flex: 1 }}>
-                                <TouchableOpacity onPress={() => { navigation.navigate("Tamagotchi") } }>
-                                    <Image style={{width: 40, height: 40, flex: 1 }} source={require('../assets/images/tamaPic.png')} />
-                                </TouchableOpacity>
-                            </SafeAreaView>
+                        <View style={{ backgroundColor: "", flex: 0.15, alignItems: 'flex-end', justifyContent:'center' }}>
+                            <TouchableOpacity onPress={() => { navigation.navigate("TabTamagotchi") } }>
+                                <Image style={{ width: 40, height: 40, flex: 1 }} source={require('../assets/images/tamaPic.png')} />
+                            </TouchableOpacity>
                         </View>
                     </View>
                 </View>
                 <View style={mealPlan.bottom}>
-                    <View style={{flex: 0.15, width: win.width*0.5}}>
+                    <View style={{flex: 0.15, width: win.width*0.7}}>
                         <Text style={{fontSize: 20, fontWeight: 'bold'}}>Name of Food:                              </Text>
                         <TextInput
                             style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
@@ -224,7 +220,7 @@ const MealPlan = () => {
                             value={nameOfFoodValue}
                         />
                     </View>
-                    <View style={{flex: 0.15, width: win.width*0.2}}>
+                    <View style={{flex: 0.15, width: win.width*0.7}}>
                         <Text style={{fontSize: 20, fontWeight: 'bold'}}>Serving Size:             </Text>
                         <TextInput
                             style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
@@ -232,7 +228,7 @@ const MealPlan = () => {
                             value={servingSizeValue}
                         />
                     </View>
-                    <View style={{flex: 0.15, width: win.width*0.2}}>
+                    <View style={{flex: 0.15, width: win.width*0.7}}>
                         <Text style={{fontSize: 20, fontWeight: 'bold'}}>Serving Weight:       </Text>
                         <TextInput
                             style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
@@ -240,7 +236,7 @@ const MealPlan = () => {
                             value={servingWeightValue}
                         />
                     </View>
-                    <View style={{flex: 0.15, width: win.width*0.2}}>
+                    <View style={{flex: 0.15, width: win.width*0.7}}>
                         <Text style={{fontSize: 20, fontWeight: 'bold'}}>Calories:                   </Text>
                         <TextInput
                             style={{ height: 40, paddingLeft: 10, borderColor: 'gray', backgroundColor: '#ffffff', borderWidth: 1 }}
