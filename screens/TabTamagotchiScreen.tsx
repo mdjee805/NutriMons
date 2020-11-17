@@ -226,8 +226,7 @@ const tamagotchi = StyleSheet.create({
         padding: 10,
         borderRadius: 10,
         marginTop: 25,
-        width: 75,
-        height: 50,
+        
     },
     buttonText: {
         color: "white"
