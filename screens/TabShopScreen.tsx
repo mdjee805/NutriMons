@@ -56,13 +56,9 @@ export default function Shop() {
             </View>
             
 
-      
-      
         </View>
   );
 }
-
-
 
 const tamaStore = StyleSheet.create({
     container: {
@@ -107,17 +103,6 @@ const tamaStore = StyleSheet.create({
     
     itemContainer: {
 
-
-
     },
-    
-
-
-
-
-
-
-
-
 
 })
