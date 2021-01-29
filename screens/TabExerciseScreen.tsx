@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { StyleSheet, Image, Button, SafeAreaView, Component, Dimensions, View, Text, TextInput } from 'react-native';
-//import { Text, View } from '../components/Themed';
 import { FieldError } from 'react-hook-form';
 import styles from "../assets/styles/styles";
 
@@ -38,7 +37,7 @@ const Exercise = () => {
 
   return (
     <View style={styles.container}>
-        <View style={exercise.top}>
+          <View style={exercise.top}>
             <View style={{backgroundColor: "", flexDirection: "row", margin: 0}}>
                 <View style={{ backgroundColor: "", flex: 0.15, alignItems: 'flex-start', justifyContent: 'center' }}>
                     <TouchableOpacity onPress={() => { navigation.navigate("TabProfile") } }>
@@ -57,8 +56,8 @@ const Exercise = () => {
                 </View>
             </View>
         </View>
-        <View style={exercise.bottom}>      
-            <View style={{backgroundColor: "lightblue", flex: 0.4}}>  
+          <View style={exercise.bottom}>      
+              {/*<View style={{backgroundColor: "lightblue", flex: 0.4}}>  
                 <View style={{flex: 0.08, backgroundColor: "#ffa514", justifyContent: 'space-around', padding: 5, width: win.width*0.8}}>
                     <Text style={{fontSize: 15, fontWeight: 'bold', color: 'black', textAlign: 'center'}}>Select An Existing Workout</Text>
                 </View>
@@ -73,7 +72,7 @@ const Exercise = () => {
                         placeholder="Select your workout" 
                     />
                 </View>
-            </View>
+            </View>*/}
             <View style={{flex: 0.1}}/>
             <View style={{backgroundColor: "lightblue", flex: 0.4, justifyContent: 'space-evenly', alignItems: 'flex-start'}}>
                 <View style={{flex: 0.25, backgroundColor: "#ffa514", justifyContent: 'space-around', padding: 5, width: win.width*0.8}}>

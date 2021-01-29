@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, Image, Button, SafeAreaView, Component  } from 'react-native';
+import { StyleSheet, Image, Button, SafeAreaView, /*Component*/  } from 'react-native';
 import { Text, View } from '../components/Themed';
 
 import styles from "../assets/styles/styles";
@@ -7,6 +7,7 @@ import styles from "../assets/styles/styles";
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import { useNavigation } from '@react-navigation/native';
+import bs from './BarcodeScanner';
 
 import BarcodeScannerComponent from "react-webcam-barcode-scanner"; // npm i react-webcam-barcode-scanner (https://www.npmjs.com/package/react-webcam-barcode-scanner)
 
@@ -36,14 +37,15 @@ export default function TabScanBarcode() {
         </View>
         <View style={meal.bottom}>
             <View style={{ backgroundColor: "lightblue", flex: 1, borderTopLeftRadius: 20, borderTopRightRadius: 20, borderBottomLeftRadius: 20, borderBottomRightRadius: 20, justifyContent: 'center', alignItems: 'center'}}>
-                <BarcodeScannerComponent
+                {/*<BarcodeScannerComponent
                     style={{borderWidth: 2, borderTopLeftRadius: 20, borderTopRightRadius: 20, borderBottomLeftRadius: 20, borderBottomRightRadius: 20}}
                     onUpdate={(err, result) => {
                         if (result) setData(result.text)
                         else setData('Not Found')
                     }}
                 />
-                <p>{data}</p>
+                <p>{data}</p>*/}
+                {bs()}
             </View>
         </View>
     </View>

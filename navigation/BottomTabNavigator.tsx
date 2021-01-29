@@ -15,27 +15,12 @@ import TabMealScreen from '../screens/TabMealScreen';
 import TabAddMealScreen from '../screens/TabAddMealScreen';
 import TabMealPlanScreen from '../screens/TabMealPlanScreen';
 import TabBarcodeScreen from '../screens/TabScanBarcodeScreen';
-// import TabNutrientScreen from '../screens/TabNutrientScreen';
 import TabExerciseScreen from '../screens/TabExerciseScreen';
 
 import TabNutrientInformationScreen from '../screens/TabNutrientInformationScreen';
 import TabNutrientOverviewScreen from '../screens/TabNutrientOverviewScreen';
 import TabShopScreen from '../screens/TabShopScreen';
-/*import TabOneScreen from '../screens/TabOneScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
-import TabBryanScreen from '../screens/TabBryanScreen';
-import TabAlissaScreen from '../screens/TabAlissaScreen';
-import TabMichaelScreen from '../screens/TabMichaelScreen';
-import TabMinhScreen from '../screens/TabMinhScreen';*/
-import { BottomTabParamList, TabDashboardParamList, TabProfileParamList, TabLoginParamList, TabRegisterParamList, TabTamagotchiParamList, TabMealParamList, TabAddMealParamList, TabMealPlanParamList, TabBarcodeParamList, TabWaterParamList, TabExerciseParamList, TabNutrientInformationParamList, TabNutrientOverviewParamList, TabShopParamList
-/*TabOneParamList, TabTwoParamList, TabAlissaParamList, TabBryanParamList, TabMichaelParamList, TabMinhParamList*/ } from '../types';
-
-/*
-=======
-import { BottomTabParamList, TabDashboardParamList, TabProfileParamList, TabTamagotchiParamList, TabNutrientParamList, TabWaterParamList, TabExerciseParamList, TabNutrientInformationParamList, TabNutrientOverviewParamList, TabShopParamList /*TabOneParamList, TabTwoParamList, TabAlissaParamList, TabBryanParamList, TabMichaelParamList, TabMinhParamList } from '../types';
->>>>>>> 9cc0d4252fe3969ff2befce6f3bc19e5d77fc30f
-*/
-
+import { BottomTabParamList, TabDashboardParamList, TabProfileParamList, TabLoginParamList, TabRegisterParamList, TabTamagotchiParamList, TabMealParamList, TabAddMealParamList, TabMealPlanParamList, TabBarcodeParamList, TabWaterParamList, TabExerciseParamList, TabNutrientInformationParamList, TabNutrientOverviewParamList, TabShopParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -144,48 +129,6 @@ export default function BottomTabNavigator() {
                     tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
                 }}
             />
-      {/*<BottomTab.Screen
-        name="TabOne"
-        component={TabOneNavigator}
-        options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
-        }}
-      />
-      <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoNavigator}
-        options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
-        }}
-      />
-      <BottomTab.Screen
-        name="TabBryan"
-        component={TabBryanNavigator}
-        options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
-        }}
-      />
-      <BottomTab.Screen
-        name="TabAlissa"
-        component={TabAlissaNavigator}
-        options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
-        }}
-      />
-      <BottomTab.Screen
-        name="TabMichael"
-        component={TabMichaelNavigator}
-        options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
-        }}
-      />
-      <BottomTab.Screen
-        name="TabMinh"
-        component={TabMinhNavigator}
-        options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
-        }}
-      />*/}
         </BottomTab.Navigator>
     );
 }
@@ -391,86 +334,3 @@ function TabShopNavigator() {
         </TabShopStack.Navigator>
     );
 }
-/*const TabOneStack = createStackNavigator<TabOneParamList>();
-
-function TabOneNavigator() {
-  return (
-    <TabOneStack.Navigator>
-      <TabOneStack.Screen
-        name="TabOneScreen"
-        component={TabOneScreen}
-        options={{ headerTitle: 'Tab One Title' }}
-      />
-    </TabOneStack.Navigator>
-  );
-}
-
-const TabTwoStack = createStackNavigator<TabTwoParamList>();
-
-function TabTwoNavigator() {
-  return (
-    <TabTwoStack.Navigator>
-      <TabTwoStack.Screen
-        name="TabTwoScreen"
-        component={TabTwoScreen}
-        options={{ headerTitle: 'Tab Two Title' }}
-      />
-    </TabTwoStack.Navigator>
-  );
-}
-
-const TabBryanStack = createStackNavigator<TabBryanParamList>();
-
-function TabBryanNavigator() {
-  return (
-    <TabBryanStack.Navigator>
-      <TabBryanStack.Screen
-        name="TabBryanScreen"
-        component={TabBryanScreen}
-        options={{ headerTitle: 'Tab Bryan Title' }}
-      />
-    </TabBryanStack.Navigator>
-  );
-}
-
-const TabAlissaStack = createStackNavigator<TabAlissaParamList>();
-
-function TabAlissaNavigator() {
-  return (
-    <TabAlissaStack.Navigator>
-      <TabAlissaStack.Screen
-        name="TabAlissaScreen"
-        component={TabAlissaScreen}
-        options={{ headerTitle: 'Tab Alissa Title' }}
-      />
-    </TabAlissaStack.Navigator>
-  );
-}
-
-const TabMichaelStack = createStackNavigator<TabMichaelParamList>();
-
-function TabMichaelNavigator() {
-  return (
-    <TabMichaelStack.Navigator>
-      <TabMichaelStack.Screen
-        name="TabMichaelScreen"
-        component={TabMichaelScreen}
-        options={{ headerTitle: 'Tab Michael Title' }}
-      />
-    </TabMichaelStack.Navigator>
-  );
-}
-
-const TabMinhStack = createStackNavigator<TabMinhParamList>();
-
-function TabMinhNavigator() {
-  return (
-    <TabMinhStack.Navigator>
-      <TabMinhStack.Screen
-        name="TabMinhScreen"
-        component={TabMinhScreen}
-        options={{ headerTitle: 'Tab Minh Title' }}
-      />
-    </TabMinhStack.Navigator>
-  );
-}*/

@@ -18,12 +18,6 @@ export type BottomTabParamList = {
     TabNutrientInformation: undefined;
     TabNutrientOverview: undefined;
     TabShop: undefined;
-  /*TabOne: undefined;
-  TabTwo: undefined;
-  TabBryan: undefined;
-  TabAlissa: undefined;
-  TabMichael: undefined;
-  TabMinh: undefined;*/
 };
 
 export type TabDashboardParamList = {
@@ -81,27 +75,3 @@ export type TabNutrientOverviewParamList = {
 export type TabShopParamList = {
     TabShopScreen: undefined;
 };
-
-/*export type TabOneParamList = {
-  TabOneScreen: undefined;
-};
-
-export type TabTwoParamList = {
-  TabTwoScreen: undefined;
-};
-
-export type TabBryanParamList = {
-  TabBryanScreen: undefined;
-};
-
-export type TabAlissaParamList = {
-  TabAlissaScreen: undefined;
-};
-
-export type TabMichaelParamList = {
-  TabMichaelScreen: undefined;
-};
-
-export type TabMinhParamList = {
-  TabMinhScreen: undefined;
-};*/

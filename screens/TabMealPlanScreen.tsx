@@ -29,7 +29,7 @@ export default function TabMeal() {
 
   return (
     <View style={styles.container}>
-        <View style={mealPlan.top}>
+          {/*<View style={mealPlan.top}>
             <View style={{backgroundColor: "", flexDirection: "row", margin: 0}}>
                 <View style={{ backgroundColor: "", flex: 0.15, alignItems: 'flex-start', justifyContent: 'center' }}>
                     <TouchableOpacity onPress={() => { navigation.navigate("TabProfile") } }>
@@ -89,7 +89,7 @@ export default function TabMeal() {
                     placeholder="Select your snacks" 
                 />
             </View>
-        </View>
+        </View>*/}
     </View>
   );
 }
